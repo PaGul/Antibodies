@@ -163,7 +163,10 @@ public class BaseFile {
                 }
             } else {
                 for (int i = pepCoordinates.left; i < pepCoordinates.right; i++) {
-                    coords[i].add(peptide);
+                    Peptide notCoveredPeptide = new Peptide(peptide.seq, 
+                            peptide.numOfRecordsInTSV, 
+                            new PepCoordinates(pepCoordinates.left, pepCoordinates.right));
+                    coords[i].add(notCoveredPeptide);
                 }
             }
         }

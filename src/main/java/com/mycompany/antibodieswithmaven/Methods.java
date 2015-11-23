@@ -5,6 +5,7 @@
  */
 package com.mycompany.antibodieswithmaven;
 
+import structures.PepCoordinates;
 import structures.ProbSeq;
 import structures.Peptide;
 
@@ -25,22 +26,22 @@ public class Methods {
     }
 
     public static int HammingDistanceWithCoverage(Peptide peptide, ProbSeq ps, int startRegionCoordinate) {
-        String peptideSeq = peptide.seq;
-        String region = ps.sequence.substring(startRegionCoordinate, startRegionCoordinate + peptideSeq.length());
+        String pepSeq = peptide.seq;
+        String region = ps.sequence.substring(startRegionCoordinate, startRegionCoordinate + pepSeq.length());
         int distance = 0;
         int minCover = Integer.MAX_VALUE;
-        for (int i = 0; i < peptideSeq.length(); i++) {
+        for (int i = 0; i < pepSeq.length(); i++) {
             if (ps.cover[i + startRegionCoordinate] < minCover) {
                 minCover = ps.cover[i + startRegionCoordinate];
             }
         }
         if (minCover > 10) {
-            return peptideSeq.length();
+            return pepSeq.length();
         }
-        for (int i = 0; i < peptideSeq.length(); i++) {
-            if (peptideSeq.charAt(i) != region.charAt(i)) {
+        for (int i = 0; i < pepSeq.length(); i++) {
+            if (pepSeq.charAt(i) != region.charAt(i)) {
                 // лейцин и изолейцин считаются за равных
-                if ((peptideSeq.charAt(i) == 'I' && region.charAt(i) == 'L') || (peptideSeq.charAt(i) == 'L' && region.charAt(i) == 'I')) {
+                if ((pepSeq.charAt(i) == 'I' && region.charAt(i) == 'L') || (pepSeq.charAt(i) == 'L' && region.charAt(i) == 'I')) {
                     continue;
                 }
                 distance++;
@@ -49,6 +50,25 @@ public class Methods {
         return distance;
     }
 
+    public static boolean shouldIReplaceThePeptide(String peptideSeq, PepCoordinates coords, ProbSeq ps) {
+        String savedPs = ps.sequence.toString();
+        int preCoverSum = 0;
+        for (int i = coords.left; i < coords.right; i++) {
+            preCoverSum += ps.cover[i];
+        }
+        ps.sequence.replace(coords.left, coords.right, peptideSeq);
+        int newCoverSum = 0;
+        int[] newCover = ps.recountCoverage();
+        for (int i = coords.left; i < coords.right; i++) {
+            newCoverSum += newCover[i];
+        }
+        if (preCoverSum<newCoverSum) {
+            ps.sequence = new StringBuilder(savedPs);
+            return true;
+        }
+        return false;
+    }
+    
     public static boolean PeptideCrossAnotherPeptide(int start, int end, boolean[] boundaries) {
         for (int i = start; i < end; i++) {
             if (boundaries[i]) {

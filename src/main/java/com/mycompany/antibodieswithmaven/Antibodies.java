@@ -144,7 +144,12 @@ class ReadApplication {
             System.out.println((coord[mHIFC].left - 1 + minHammingIndex + 1) + " " + (coord[mHIFC].right - 1 + minHammingIndex + 1));
             System.out.println(ps.sequence.subSequence(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex));
             System.out.println(peptide.seq);
-            ps.sequence.replace(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex, peptide.seq);
+            Methods.shouldIReplaceThePeptide(
+                    peptide.seq, 
+                    new PepCoordinates(coord[mHIFC].left - 1 + minHammingIndex, 
+                            coord[mHIFC].right - 1 + minHammingIndex), 
+                    ps);
+//            ps.sequence.replace(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex, peptide.seq);
             for (int i = coord[mHIFC].left - 1 + minHammingIndex; i < coord[mHIFC].right - 1 + minHammingIndex; i++) {
                 ps.bounds[i] = true;
             }

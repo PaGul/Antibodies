@@ -15,14 +15,14 @@ import java.util.List;
  */
 public class ProbSeq {
     public String probSeqName;
-    public StringBuffer sequence;
+    public StringBuilder sequence;
     public int[] cover;
     public boolean[] bounds;
     
     public List[] coverageByPeptides;
     public ProbSeq(String probSeqName, String probSeq) {
         this.probSeqName = probSeqName;
-        this.sequence = new StringBuffer(probSeq);
+        this.sequence = new StringBuilder(probSeq);
         bounds = new boolean[probSeq.length()];
         cover = new int[probSeq.length()];
     }
@@ -42,7 +42,7 @@ public class ProbSeq {
                 boolean coverPs = true;
                 boolean wasCoverPs = peptide.isContainsInProbSeq();
                 for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
-                    if (peptide.seq.charAt(j) != currSeq.charAt(j)) {
+                    if (peptide.seq.charAt(j - peptide.pepCoords.left) != currSeq.charAt(j)) {
                         coverPs = false;
                         break;
                     }
