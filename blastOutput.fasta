@@ -1,0 +1,1302 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+BLASTP 2.2.32+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen
+F. Altschul, John C. Wootton, E. Michael Gertz, Richa
+Agarwala, Aleksandr Morgulis, Alejandro A. Schaffer, and
+Yi-Kuo Yu (2005) "Protein database searches using
+compositionally adjusted substitution matrices", FEBS J.
+272:5101-5109.
+
+
+RID: 2WBRG26501R
+
+
+Database: All non-redundant GenBank CDS
+translations+PDB+SwissProt+PIR+PRF excluding environmental samples
+from WGS projects
+           73,792,625 sequences; 26,861,771,399 total letters
+Query= 
+Length=450
+
+
+                                                                   Score     E
+Sequences producing significant alignments:                       (Bits)  Value
+
+gb|AAS77396.1|  anti-GD3 monoclonal antibody 3D2 immunoglobuli...  845     0.0  
+emb|CAD88275.1|  anti-human CD19 monoclonal antibody 4G7 immun...  842     0.0  
+gb|ABD73933.1|  mAb6H8 immunoglobulin gamma heavy chain [Mus m...  827     0.0  
+gb|AAH33451.1|  Igh protein [Mus musculus]                         823     0.0  
+dbj|BAQ35526.1|  mAb 132 heavy chain [Mus musculus]                822     0.0  
+gb|AAH02121.1|  Igh protein [Mus musculus]                         821     0.0  
+gb|AAL76040.1|AF466769_1  monoclonal antibody BBK-2 heavy chai...  819     0.0  
+gb|AAH03435.1|  Igh protein [Mus musculus]                         818     0.0  
+dbj|BAQ25543.1|  mAb 31C6 heavy chain [Mus musculus]               817     0.0  
+gb|AHN49951.1|  mAb2 anti-human butyrylcholinesterase immunogl...  817     0.0  
+gb|ALD84365.1|  monoclonal 11D8 anti-human butyrylcholinestera...  816     0.0  
+gb|AAP79430.1|  anti-potato cyst nematode monoclonal antibody ...  812     0.0  
+gb|AGX28126.1|  anti-H5N1 hemagglutinin monoclonal anitbody H5...  810     0.0  
+gb|AAT74919.1|  anti-PRSV coat protein monoclonal antibody PRS...  809     0.0  
+dbj|BAL50003.1|  anti-prostaglandin E2 antibody heavy chain [M...  804     0.0  
+gb|ADJ93821.1|  3S9 anti-prion protein monoclonal antibody hea...  804     0.0  
+emb|CAD32497.1|  immunoglobulin gamma1 heavy chain [Mus musculus]  796     0.0  
+emb|CAD32498.1|  immunoglobulin gamma1 heavy chain [Mus musculus]  794     0.0  
+pdb|1IGY|B  Chain B, Structure Of Immunoglobulin                   790     0.0  
+emb|CAA56280.1|  heavy chain of the monoclonal antibody MST2 [...  788     0.0  
+gb|AAA51043.1|  Ig heavy chain [Mus musculus]                      781     0.0  
+gb|AAH24405.1|  Igh protein [Mus musculus]                         775     0.0  
+dbj|BAE25911.1|  unnamed protein product [Mus musculus]            771     0.0  
+gb|AAH08237.1|  Igh protein [Mus musculus]                         765     0.0  
+gb|AAA75163.1|  immunoglobulin gamma-chain [Mus musculus]          759     0.0  
+gb|AEK78852.1|  anti-human Langerin 2G3 monoclonal antibody [M...  758     0.0  
+gb|AAL76038.2|AF466767_1  monoclonal antibody BBK-1 heavy chai...  757     0.0  
+gb|ACX70086.1|  anti-FimA monoclonal antibody immunoglobulin g...  753     0.0  
+emb|CAD68983.1|  immunoglobulin heavy chain [Mus musculus]         752     0.0  
+gb|AAD40243.1|AF152372_1  gamma1 heavy chain of Mab7 [Mus musc...  750     0.0  
+pdb|4IJ3|C  Chain C, Oxidoreductase Fragment Of Human Qsox1 In...  749     0.0  
+gb|AAB06744.1|  immunoglobulin gamma 1 chain [Mus musculus]        749     0.0  
+emb|CAN87018.1|  anti-human c-myc monoclonal antibody 9E10 imm...  749     0.0  
+pir||PC4436  monoclonal antibody 13-1 heavy chain - mouse (fra...  748     0.0  
+gb|AAH57688.1|  Igh protein [Mus musculus]                         747     0.0  
+dbj|BAC44885.1|  immunoglobulin gamma-1 heavy chain [Mus muscu...  746     0.0  
+gb|ABQ85914.1|  immunoglobulin gamma 1 heavy chain precursor [...  743     0.0  
+gb|AAB28159.1|  anti-colorectal carcinoma heavy chain [Homo sa...  741     0.0  
+gb|AAD00000.1|  anti-NGF30 antibody heavy-chain [Rattus norveg...  741     0.0  
+dbj|BAI77863.1|  anti-leukotriene C4 monoclonal antibody immun...  741     0.0  
+gb|ABD73925.1|  mAb6H4 immunoglobulin gamma heavy chain [Mus m...  738     0.0  
+gb|ABD73927.1|  mAb3F2 immunoglobulin gamma heavy chain [Mus m...  737     0.0  
+gb|ABD73931.1|  mAb5C2 immunoglobulin gamma heavy chain [Mus m...  736     0.0  
+gb|ABD73929.1|  mAb7H11 immunoglobulin gamma heavy chain [Mus ...  732     0.0  
+gb|AAH91272.1|  LOC367586 protein [Rattus norvegicus]              711     0.0  
+gb|AAH91257.1|  LOC367586 protein [Rattus norvegicus]              704     0.0  
+gb|AAH95846.1|  Ighg protein [Rattus norvegicus]                   689     0.0  
+gb|AAH88271.1|  Immunoglobulin heavy chain (gamma polypeptide)...  685     0.0  
+gb|AAH92584.1|  Ighg protein [Rattus norvegicus]                   676     0.0  
+dbj|BAC30871.1|  unnamed protein product [Mus musculus]            670     0.0  
+gb|AAK53870.1|  immunoglobulin heavy chain constant region [Mu...  665     0.0  
+gb|AAA91897.1|  gamma-2a immunoglobulin heavy chain [Rattus no...  664     0.0  
+gb|AAB59664.1|  stop codon and following 6 bases deleted; puta...  663     0.0  
+gb|AAB59665.2|  immunoglobulin heavy chain constant region [Mu...  663     0.0  
+gb|EDL18547.1|  mCG147635, isoform CRA_a [Mus musculus]            663     0.0  
+gb|ABP35935.1|  immunoglobulin heavy chain gamma 1 constant re...  662     0.0  
+sp|P01868.1|IGHG1_MOUSE  RecName: Full=Ig gamma-1 chain C regi...  654     0.0  
+sp|P01869.2|IGH1M_MOUSE  RecName: Full=Ig gamma-1 chain C regi...  654     0.0  
+gb|AAB59656.1|  immunoglobulin gamma-chain [Mus musculus domes...  651     0.0  
+gb|AAH88423.1|  LOC367586 protein [Rattus norvegicus]              650     0.0  
+gb|AAB59657.1|  Ig gamma-1 chain C region membrane form [Mus m...  650     0.0  
+gb|AAA91896.1|  gamma-2a immunoglobulin heavy chain [Rattus no...  647     0.0  
+gb|AAH88240.1|  IgG-2a protein [Rattus norvegicus]                 646     0.0  
+gb|AAH92049.1|  Ighg protein [Mus musculus]                        641     0.0  
+gb|AAH03888.1|  Igh protein [Mus musculus]                         630     0.0  
+dbj|BAA03476.1|  immunoglobulin gamma-3 heavy chain precursor ...  630     0.0  
+gb|ACX70084.1|  immunoglobulin gamma 2b heavy chain precursor ...  629     0.0  
+dbj|BAB25349.1|  unnamed protein product [Mus musculus]            629     0.0  
+emb|CBI70317.1|  monoclonal antibody A13-d6.3 heavy chain prec...  628     0.0  
+gb|AKH40268.1|  mAb 2055.5.C14 immunoglobulin gamma heavy chai...  626     0.0  
+gb|AAH18280.1|  Igh protein [Mus musculus]                         625     0.0  
+gb|AAH18535.1|  Igh protein [Mus musculus]                         620     0.0  
+pir||S40295  Ig gamma-2a chain (mAb735) - mouse                    618     0.0  
+pir||S37483  Ig gamma-2a chain - mouse                             615     0.0  
+gb|AAH92061.1|  Igh protein [Mus musculus]                         615     0.0  
+gb|AAH03878.1|  Ighg protein [Mus musculus]                        612     0.0  
+gb|AIU56800.1|  anti-dectin-1 15E2 heavy chain [Mus musculus]      611     0.0  
+gb|AAH92271.1|  Igh protein [Mus musculus]                         611     0.0  
+gb|AAH57672.1|  Igh protein [Mus musculus]                         611     0.0  
+gb|AHX42424.1|  antibody 4G2 immunoglobulin G2a heavy chain [M...  610     0.0  
+gb|AAH94467.1|  Igh protein [Mus musculus]                         609     0.0  
+gb|AEL29442.1|  monoclonal antibody 16E7_H [synthetic construct]   608     0.0  
+gb|AAA51630.1|  Ig heavy chain variable region gamma-2b C-regi...  606     0.0  
+gb|AFX62604.1|  anti-Langerin 4C7 immunoglobulin heavy chain [...  601     0.0  
+gb|AEG80191.1|  immunoglobulin HL4E10 heavy chain [Cricetulus ...  600     0.0  
+pdb|4WEB|H  Chain H, Structure Of The Core Ectodomain Of The H...  600     0.0  
+gb|ACN59875.1|  chimeric anti-human type VII collagen immunogl...  598     0.0  
+gb|ABQ85916.1|  immunoglobulin gamma 2b heavy chain precursor ...  593     0.0  
+gb|AAT74921.1|  anti-CMV coat protein monoclonal antibody CymM...  589     0.0  
+emb|CAA47649.1|  immunoglobulin gamma 2b heavy chain [Mus musc...  588     0.0  
+gb|ACN59874.1|  chimeric anti-human type VII collagen immunogl...  587     0.0  
+dbj|BAR71188.1|  mAb 106 heavy chain [Mus musculus]                584     0.0  
+dbj|BAC85483.1|  unnamed protein product [Homo sapiens]            578     0.0  
+gb|AAH25447.1|  Ighg protein [Mus musculus]                        578     0.0  
+gb|AAH92269.1|  Ighg protein [Mus musculus]                        578     0.0  
+gb|AIC63043.1|  IGHG1 [synthetic construct]                        576     0.0  
+gb|AAG00910.2|  recombinant IgG2 heavy chain [Homo sapiens]        576     0.0  
+dbj|BAG62928.1|  unnamed protein product [Homo sapiens]            575     0.0  
+gb|ABH10632.1|  humanized murine anti-VEEV antibody Hy4-26C he...  575     0.0  
+dbj|BAR42291.1|  mAb 44B1 heavy chain [Mus musculus]               574     0.0  
+
+ALIGNMENTS
+
+Query     1    QVQLQQSAAELARPGASVKMSCKASGYTFTSYTMHWVKQRPGQGLEWIGYINPSSGYTEY  60
+AAS77396  1    .....E.G..........M..........S......I................N...I..  60
+CAD88275  20   E......GP..IK...................V......K.............YNDG.K.  79
+ABD73933  1    ......PG...VK....M.L...........FW................E....N.RNK.  60
+AAH33451  20   E......GP..VK.................D.F......SY.ES.........YNDFPT.  79
+BAQ35526  20   ...V..PGT.VVKS....NLP.......L...W................N....N.NAN.  79
+AAH02121  20   .......G...................S....GIS....KTR.......E.Y.G..N.Y.  79
+AAL76040  20   ......PG...V.......L............WIN..............N.Y..DS..N.  79
+AAH03435  20   .......G..........RL..........G.GVS.....T......V.E.Y.G..N.Y.  79
+BAQ25543  29            ..........L............GIS.....T........E.F.R..N.Y.  79
+AHN49951  1    .......G...V...S...I.......A.S..W.N..............Q.Y.GDSD.N.  60
+ALD84365  20   .......G...........L...........QWLQ..............A.Y.GD.D.R.  79
+AAP79430  21   ....V..GP..V..................D.W................M.D..N.G.WL  80
+AGX28126  20   E.H....GP..VK..........T......E..I..M..SH.KS.....G.F.NN.D.T.  79
+AAT74919  20   E......GPD.VK......I..RT......E........SH.KS.....G...NN.V.R.  79
+BAL50003  20   K......G...VK......L..........E.FI......S........WFY.G..SLN.  79
+ADJ93821  20   E.H....GP..VK......I......DS..G.Y.N....S.ETI.....E.D..T.G.T.  79
+CAD32497  20   E......GP.RVK......I..........D.Y.N....SH.KS.....D...NN.G.S.  79
+CAD32498  20   E......GP.RVK......I..........D.Y.N....SH.KS.....D...NN.G.S.  79
+1IGY_B    1     .K..E.G......................T..I..I..................V..N.  59
+CAA56280  26           ...V......TL..........D.EID....T.VH......AVD.ET.G.A.  77
+AAA51043  21    ......GP..EK......I......FSLPGHNIN.IV..N.KS.....N.D.YY.G.NF  79
+AAH24405  20   E.N.VE.GGG.VQ..G.LRL..A...F...D.Y.S..R.P..KA...L.F..KAN.....  81
+                                                                  \      \ 
+                                                                  |      | 
+                                                                  R      T
+BAE25911  20   ....K..GPG.VQ.SQ.LSIT.TV..FSL...GV...R.S..K....L.VMW-RG.S.D.  78
+AAH08237  20   E...VE.GGG.VK..G.L.L..A...FS.SN.D.S..R.T.EKR...VAA..-.G.NIFC  78
+AAA75163  19   E.R.LE.GGGPVQ..G.L.L..A...FD.SR.W.N..RRA..K......E..QQ.STIN.  78
+AEK78852  24   E...VE.GGG.VQ.KG.L.L..A...L..NI.A.N..R.A..K....VAR..K.NN..Y.  85
+                                                                  \     \  
+                                                                  |     |  
+                                                                  R     A
+AAL76038  20   E...VE.GGG.VK..G.L.L..A...F..SR.A.S.FR.S.ERR...VAE.STGGS..Y.  79
+ACX70086  18   E.K.VE.GGG.VQ..G.L.L..AT..F..SD.Y.Y..R.T.EKR...VA..SNGG.T.YS  77
+CAD68983  20   E.K.VE.GGG.VK..G.L.L..A...F..S..G.S..R.T.EKR...VAT.SGGGSH.Y.  79
+AAD40243  1     ....E.GGG.VK..G.L.L..A...F..S..A.S..R.T.EKR...VASFS-.G.IIY.  58
+4IJ3_C    1    ....K..GPG.VA.SQ.LSIT.TV..FSL.G.GVN..R.S..K....L.M.W-GD.R.D.  59
+AAB06744  20    ....E.GPG.VK.SQ.LSLT.TVT..SV...AWN.IR.F..NK...L....-Y..S.S.  78
+                                              \                            
+                                              |                            
+                                              E
+CAN87018  20   E.H.VE.GGD.VK..G.L.L..A...F..SH.G.S..R.T.DKR...VAT.GSRGT..H.  79
+PC4436    1    E..XVETGGG.V...N.L.L..LT..F..SN.R...LR.P..KR....AV.TVK.DNAK.  62
+                                                                        \  
+                                                                        |  
+                                                                       YG
+AAH57688  20   ...MKE.GPD.VQ.SQTLSLT.TV..FSLS..GV..FRKP.RK....L.G.W-.G.SIY.  78
+BAC44885  20   E.K.EE.GGG.VQ..G.M.L..V...F..SN.W.L..R.S.EK.....AE.RK.NN.VH.  81
+                                                                   \    \  
+                                                                   |    |  
+                                                                   L    G
+ABQ85914  1    E...PE.GPG.VA.SQ.LSIT.TV..FSL.D.GVN..R.P..K....L.M.W-DD.D.D.  59
+AAB28159  20   E.K.EE.GGG.VQ..G.M.L..A...F..SDAW.D..R.S.EK....VAE..KGNNH.Y.  81
+                                                                  \     \  
+                                                                  |     |  
+                                                                  G     A
+AAD00000  1    ..K..E.GPG.VA.SQ.LSIT.TV..FSL...GV...R.P..K....L.V.W-AG.N.N.  59
+BAI77863  20   E.K.EE.GGG.VQ..G.M.L..V...F.ISN.W.N..R.S.EK..D.VAE.RLK.NV.H.  81
+                                                                       \   
+                                                                       |   
+                                                                      NY
+ABD73925  1    E....E.GPS.VK.SQTLSLT.SVT.DSV..GYWS.IR.F..NK.DYM...S-YR.S.Y.  59
+ABD73927  2     ....E.GPS.VK.SQTLSLT.SVT.DSI..GYRS.IRKF.ESK..YM...S-YR.S.Y.  59
+ABD73931  1    E....E.GPS.VK.SQ.LSLT.SVT.SSI...YWN.YR.F..NK...M...S-FD.TNI.  60
+                                              \                            
+                                              |                            
+                                              L
+ABD73929  2     ...KE.GPG.VK.SQ.LSVT.SVT..SI...YWN.YR.F..NK...M...T-YD.RNN.  60
+                                              \                            
+                                              |                            
+                                              G
+AAH91272  20   .......G...VK..S...I..........N.DI..I..Q..N......W.Y.GN.N.K.  79
+AAH91257  20   .......G....K..S...I............DVS.I..TT.....Y.....TG..GIY.  79
+AAH95846  20   E...VETGGG.VQ..R.L.L..V...F..S..W.Y.IR.A..K....VSS..TDG.S.Y.  79
+AAH88271  20   E...VE.GGG.VQ..R.M.L..A...F..SN.G.A..R.A.KK....VA..SYDG...Y.  79
+AAH92584  20   E..ILETGGG.VK..G.LRL..AT..FN.ND.F.N..R.A..K....VVQ..KNYN..Y.  81
+                                                                  \     \  
+                                                                  |     |  
+                                                                  R     G
+AAA91897  20   E...VE.GGG.VQ..R.LRL..A...F..SD.D.A..R.A.TK.....AS.TTGG...F.  79
+AAH88423  20   E...VE.GGG.VQ..R.L.L..A...F..SD.N.A..R.A.KK....VAT.IYDGSR.Y.  79
+AAA91896  20   E.K.LE.GGG.VQ..G.MRL..A...F...DFY.N.IR.PA.KAP..L.F..KAN.....  81
+                                                                  \      \ 
+                                                                  |      | 
+                                                                  R      T
+AAH88240  20   ....ME.GPG.VQ.SETLSLI.TV..FSL...NV...R.P..K....M.VMW-.G.N.D.  78
+AAH92049  20   .......G....K...................W...........................  79
+AAH03888  20   .......D...VK......I...V......DH.I.......E.........Y.RD.S.K.  79
+BAA03476  20   .......G...V...T........A.....N.WIG.......H......D.Y.GG...N.  79
+ACX70084  20   .......G....K..............S....W.....................T.....  79
+BAB25349  20   ....K..G...VK......I..........D.YIN..............K.G.G..S.Y.  79
+CBI70317  36   ......PG...VK..............S....W.N.......R......R.D..DNE.H.  95
+AKH40268  20   ......PG...VK...................N......T.........A.Y.GN.D.S.  79
+AAH18280  20   ....K..G...VK......L.........N..I.................FS.YNDD.KC  79
+AAH18535  20   E......GP..VKT...............SD.Y......SH.KS.......Y.NN.GNG.  79
+S40295    1    .I.....GP..V.......I..........D.YI........E......W.Y.G..N.K.  60
+S37483    20   .I.....GP..VK......I..........D.YIN....K.....K...W.Y.A..N.K.  79
+AAH92061  20   E...H..GP..VEA.....L.........GD.YV.....SH.KS.D...N.Y.NN.GND.  79
+AAH03878  20   E......G...V.......L..T...FNIKDSL........E.......W.D.ED.E.K.  79
+AIU56800  20   .......G......................T...........................N.  79
+AAH92271  20   E......G...V...S...L...T........YIN..............H.Y.GN.....  79
+AAH57672  20   ....K..G...V.......L.......I....WI......S.......AR.Y.GT.S.Y.  79
+AHX42424  20   E......GP..VK..T...I...T......E..I.....SH.KS.A...G.D.N..G.N.  79
+AAH94467  20   E......G...V.......L..T...FNIKDSL........E.......W.D.ED.E.K.  79
+AEL29442  20   .......G....K.................T.W....................IT.....  79
+AAA51630  1    E......G...V...T........A.....N.WIG...E...H......D.Y.GG.F.N.  60
+AFX62604  39           ...V......TL.........IDHD....Q.T.VY......A.D.ET.D.G.  90
+AEG80191  20   ....KE.GPG.LQ.SQTLSLT.TV..ISLSD.GV...R.A..K....M.I.GHAG.-.D.  78
+4WEB_H    20   E......G...VK......L..T...FNIKDTYI...N...E.......R.D.AN.H.Q.  79
+ACN59875  22   E......G...MK......I....T....G..WIE.......H......E.L.G..F.N.  81
+ABQ85916  1    EY.....GTV......................W................G.Y.GNSD.T.  60
+AAT74921  20   E......GPD.VM.....RL.......S..D.YI...R.SHLKS.....RL..YN.APD.  79
+CAA47649  20   E......GP..VN................IT.V......K.............NKDG.KF  79
+ACN59874  22   E......G...MK......I....T....G..WIE.......H......E.L.G..F.N.  81
+BAR71188  20   ......PG...VM.....RL..........R.W...L.....R......W.D.N.DG.K.  79
+BAC85483  20   ....E..G..VRK..S...V..R...V..NRFEIN..R.A.......V.R.I.ILEI.N.  79
+AAH25447  20   ....L..GP..VK......I..R....A.SKSW.N...R...K......R.F.GD.D.H.  79
+AAH92269  20   E...L..GT..V.......L..T...FSIKDSLL...M...E.......W.D.ED.E.K.  79
+AIC63043  20   ....V..G..VKK......V..........N.Y....R.A.......M.I....G.S.D.  79
+AAG00910  1    E.X..Z.GTV........R........S....WL..I............G.Y.GNRD.R.  60
+BAG62928  20   ....V..G..VKK......V.....D...S..GIS..R.A.......M.W.S.YT.N.D.  79
+ABH10632  1    E...V..G..VKK...T..I...V......D.YIN.MQ.A..K......R.Y.GY.N.K.  60
+BAR42291  20   D.K.VE.GEG.VK..G.L.L..A...I..SR.A.S..R.T.EKR...VA..SSGGD.IN.  79
+
+Query     61   NQKFKDKTTLTADKSSSTAYMQLSSLTSEDSAVYYCARCARAPQFYYYGSRYFDVWGAGT  120
+AAS77396  61   ......................................---------WLL.E.AY..Q..  111
+CAD88275  80   .E...G.A...S.........E................GT-----......V..Y..Q..  134
+ABD73933  61   .E...N.A...V........................T.DSFGGS--.D.FYSM.Y..Q..  118
+AAH33451  80   .....G.AK..V...........N..........F...----RRI..SYDH...Y..Q..  135
+BAQ35526  80   .E..RR.A.............................------S...DYDEG.AY..Q..  133
+AAH02121  80   .E...G.A..........................F...---------W.EPWV.Y..Q..  131
+                                                                   \       
+                                                                   |       
+                                                                   D
+AAL76040  80   .......A...V....N.V....N.P..........T.NGVEGYPH..AME.---..Q..  136
+AAH03435  80   SE...G.A...T.........H............F...SS------..SYDL.AY..Q..  133
+BAQ25543  80   .E...G.A..P..........E.R..........F...---------...TS..Y..Q..  130
+AHN49951  61   .G...G.A..........................F...--------D..KDH..Y..Q..  112
+ALD84365  80   T....G.A...............TN.AP..........SS------------M.Y..Q..  127
+AAP79430  81   ..Q..G.A..NVA...N...................S.----------N.PW.AY..Q..  130
+AGX28126  80   .....VRA...VGR.......D.R............V.--------N...S.........  133
+                                                                   \       
+                                                                   |       
+                                                                  GY
+AAT74919  80   ..N..G.A...V.........E.R........I...S.-------.D.A---M.Y..Q..  129
+BAL50003  80   .G.....A.F........V.LE..R.........F..SH.YDKEP.---------..Q..  130
+ADJ93821  80   ....EAMAS..V.R..N......K..............-------F..D.GG..Y..Q..  132
+CAD32497  80   ....EG.A...V.........E.R..............G---------.LHW.PY..Q..  130
+CAD32498  80   ....EG.A...V.........E.R..............G---------.LHW.PY..Q..  130
+1IGY_B    60   ..R....A...R.R..N..NIH......D.......V.EGEV.-----------Y..Q..  108
+CAA56280  78   .....G.A.............E.R............T.GN------.GN.AW.AY..Q..  131
+AAA51043  80   .P...G.A...V......L..H.T..Q...........RRD-------.NYG.TY..Q..  132
+AAH24405  82   SASV.GRF.ISR.N.Q.IL.L.MNA.RA....T.....DR.SS--...SGTS.AY..Q..  139
+BAE25911  79   .AA.MSRLSI.R.N.K.QVFFKMN..QAD.T......KNGYE-RD.DG.TY...Y..Q..  137
+AAH08237  79   PDSV.GRF.ISR.NAKN.L.L.M...K...T.I.....-----RVWLRREY...Y..Q..  133
+AAA75163  79   SPPL...FIISR.NAK..L.L.MNKVR...T.L.....LSLTAAGFA.-------..Q..  131
+AEK78852  86   ADSV..RF.ISR.D.Q.LL.L.MNN.KT..T.M...V-----------.RDW..Y..Q..  134
+AAL76038  80   PDTVTGRF.ISR.NAKN.L.LEM...R...T......K-------F.DSVGAM.Y..Q..  132
+ACX70086  78   PDTV.GRF.ISR.NAKN.L.L.M.R.K...T.M.....--------HEHGY.VAY..Q..  129
+CAD68983  80   PDIV.GRF.ISR.NAKNNL.L.M...R...T.L.H...-------RDWDGY...Y..Q..  132
+AAD40243  59   TDSV.GRF.IYK..DRNILSL.M...R...T.M.....-----------GD.SAY..P..  107
+4IJ3_C    60   KSAL.SRLSI.K.N.K.QVFLKMN..QTD.T.R.F..S-------D....GS.AY..Q..  112
+AAB06744  79   .PSL.SRISI.R.T.KNQFFL..N.V.T..T.T....-----------DRSW.AY..Q..  127
+CAN87018  80   PDSV.GRF.ISR.NDKNAL.L.MN..K...T.M.....RSEYYYGNT.YYSAM.Y..Q.A  140
+                                                        \                  
+                                                        |                  
+                                                        F
+PC4436    63   AESVRGRF.ISR.D.K.SV.L.MNR.RE..T.T...C.---T.WV.A-----M.C..Q..  114
+AAH57688  79   TPALSSRLSVNR.I.K.QVFFKMT..Q...T...H...---------R..ED........  130
+                                                                 \         
+                                                                 |         
+                                                                 Y
+BAC44885  82   AESVRGRFIISR.D.R.SV.L.MNN.RP..TGI...T.----.GYK.D.A----Y..Q..  133
+ABQ85914  60   SSVL.SRLSI.K.N.KNQVFLKMNR.QTD.T.R.F...DT------L.T.YAM.Y..Q..  113
+AAB28159  82   AESV.GRF.VSR.D.K.RV.L.MN..RV..TGT...-------------TTR.AY..Q..  128
+AAD00000  60   .SAHMSRVSFSK.N.K.QVFLKMN..QTD.T.L.....------------DHGVY..Q..  107
+BAI77863  82   AESV.GRF.ISR.D.KNSV.L.MNN.RP..TGI...TPIYSP----------.AY..Q..  131
+ABD73925  60   .PSL.SRISI.R.T.KNQV.L..K.VS...T.T...S--------.FDSDD.MEY..Q..  112
+                                                                   \       
+                                                                   |       
+                                                                   A
+ABD73927  60   .PSL.SRLSI.R.T.KNQF.L..T.V.T..T.T...S-------YFD.DDFTMEY..Q..  112
+ABD73931  61   .PSL.KRISI.R.T.KNQFFLK.N.V.T..T.T...S.-------DH.DEA.---..Q..  110
+ABD73929  61   .PSL.NRISI.R.T.KNQILLK.TYV.T..T.T...T.DD-------.DEA.---..Q..  110
+AAH91272  80   ....NG.A..........................F...------D.FD.---Y.Y..Q.V  130
+AAH91257  80   TE...G.A...V.......F.......P..T.....T.---------D.T.IM.A..Q..  130
+AAH95846  80   PDSV.GRF.ISR.NAEN.V.L.MN..R...T.T....KGGE-----...YN...Y..Q.V  135
+                                                                   \       
+                                                                   |       
+                                                                   P
+AAH88271  80   RDPV.GRF.ISR.NAKN.L.L.MD..R...T.T...TTDR------...YNW.TY..Q..  133
+AAH92584  82   AESLEGRV.ISR.D.K.SV.L.VT.FRP..T.I...T.SRP-----...YN...Y..Q.V  136
+AAA91897  80   RDSV.GRF.ISR.NAKNSQ.L.MD..R...T.T.....I-------.G..H...Y..QAV  132
+AAH88423  80   RDSV.GRF.ISR.NAK..L.L.MD..R...T.T....TNR------WLLLH...Y..Q.V  133
+AAA91896  82   .PSV.GRF.ISR.NTQNML.L.MNT.RA..T.T.....---GDY.NN.MFP.M.A..Q.G  139
+                                                                   \       
+                                                                   |       
+                                                                   V
+AAH88240  79   .SAL.SRLSISR.T.KNQVFLKMN..Q...ATT.....-----EG.P.---..NY..Q.V  130
+AAH92049  80   .......A..............................-----S....SEGAM.Y..Q..  134
+AAH03888  80   .E...G.A...............N.........CF.S.GGSI--Y.G..LY...Y..Q..  137
+BAA03476  80   .E...G.A.....T..................I.....L-.GGGY..A----M.Y..Q..  134
+ACX70084  80   .......A..............................G----DG..E.--W.AY..Q..  133
+BAB25349  80   .E...G.A..........................F...SG-------.DYDW.AY..Q..  132
+CBI70317  96   ..D....V...V......V.I...............G.LG-----.V..---..Y..Q..  147
+AKH40268  80   .....G.A..............................SRAR------AREAM.Y..Q..  133
+AAH18280  80   .E...G.A.............E................----------.YYV..Y..Q..  129
+AAH18535  80   .....G.A...V.........E.R..............GYIS---..SYDH...Y..Q..  136
+S40295    61   .E...G.A...V.T....................F...G---------.KFAM.Y..Q..  111
+S37483    80   .EN..G.A...V.T................T...F...AMG.T------ATLL.Y..Q..  133
+AAH92061  80   .....G.A...V..A......E.R..............---GNVI..SYDQ...N..Q..  136
+AAH03878  80   AP..Q..A.I...T..N...L.........T.I.....-----NLL.G.--.Y.Y..Q..  132
+AIU56800  80   .......A...........S..................-E..VLVP.A----M.Y..Q..  134
+AAH92271  80   .E...G.A...S.T.........R.....N..I.F...TGG-----.D.--...Y..Q..  132
+AAH57672  80   .E...G.A...........F......K.......F..--------.G.DAL.---..Q..  128
+AHX42424  80   SPN..G.A...V.........D.R..S.......F...I-----YH.D.--.........  132
+AAH94467  80   AP..Q..A.I...T..N...L.........T.I.....-----NLL.G.--.Y.Y..Q..  132
+AEL29442  80   .......A..............................---------E.LSAM.Y..Q..  130
+AAA51630  61   .EN..G.A.....T..................I.H...-----GI..NS.P...S..Q..  115
+AFX62604  91   .....G.AI.......R....E.R............TI-----P...SNYSP.AY..Q..  145
+AEG80191  79   .SNL.SRVSISR.T.K.QVFLK.N..QQ..T.M.F...-----H..----T......Q.I  129
+4WEB_H    80   DP..QG.A.I...T..N...L.........T......TSD-----.S.A---L.S..Q..  131
+ACN59875  82   .E.....A.F...T..N....................M-----------DNS.AY..Q..  130
+ABQ85916  61   .....G.AK...VT.T.....E.....N........----------L..NYD..Y..Q..  110
+AAT74921  80   ..N.RA.AS..L.........E.T-V...........AS-------------L.Y..Q..  125
+CAA47649  80   .E...G.A...S....N....E................--------D.DYDW.AY..Q..  131
+ACN59874  82   .E.....A.F...T..N....................M-----------DNS.AY..Q..  130
+BAR71188  80   .E...G.A...V.IP....F.................------------GNFGAY..Q..  127
+BAC85483  80   A...QGRI.I...E.T.....E.TN.RF..T.IFF..TAPSDSGY....---L....Q..  136
+AAH25447  80   SG..QG.AK.......V..FL..T..........F...DSD------..D-...D..Q.A  132
+AAH92269  80   VP..Q..A....AT..N...L.......G.T.T...L-------..G..RD...Y..Q..  134
+                                                               \           
+                                                               |           
+                                                              DD
+AIC63043  80   A.N.QGRV.M.R.T.T..V..E.T..R...T.......IG-----------VH.Y..Q..  128
+AAG00910  61   T.R....AK...VT.AN....E.....N........SII-----YFD.ADFIM.Y..Q..  115
+BAG62928  80   T..LQGRV.M.T.I.T.....E.R..R.D.T...F...DS.V----MS.GS...L..R..  135
+ABH10632  61   .D...GRV.....T.TD....E....R...T...F...SLT----------F.....Q..  110
+BAR42291  80   ADTV.GRF.ISR.NARN.L.L.M...K...T.M...T.VTP-----.W---......T..  131
+
+Query     121  TVTVSSAKTTPPSVYPLAPGSAAQTNSMVTLGCLVKGYFPEPVTVTWNSGSLSSGVHTFP  180
+AAS77396  112  L....A...............G......................................  171
+CAD88275  135  .L..........................................................  194
+ABD73933  119  S...........................................................  178
+AAH33451  136  AI..........................................................  195
+BAQ35526  134  L....A......................................................  193
+AAH02121  132  .I..........................................................  191
+AAL76040  137  S...........................................................  196
+AAH03435  134  L....A......................................................  193
+BAQ25543  131  .L..........................................................  190
+AHN49951  113  .L..........................................................  172
+ALD84365  128  S...........................................................  187
+AAP79430  131  L....A..S...................................................  190
+AGX28126  134  ............................................................  193
+AAT74919  130  S...........................................................  189
+BAL50003  131  L....A......................................................  190
+ADJ93821  133  AL..........................................................  192
+CAD32497  131  L....A......................................................  190
+CAD32498  131  L....A......................................................  190
+1IGY_B    109  ............................................................  168
+CAA56280  132  L....A......................................................  191
+AAA51043  133  L....A......................................................  192
+AAH24405  140  L....A......................................................  199
+BAE25911  138  .L..........................................................  197
+AAH08237  134  .I..........................................................  193
+AAA75163  132  L....A......................................................  191
+AEK78852  135  L....A......................................................  194
+AAL76038  133  S...........................................................  192
+ACX70086  130  L....A......................................................  189
+CAD68983  133  .L..........................................................  192
+AAD40243  108  L....A......................................................  167
+4IJ3_C    113  L....A......................................................  172
+AAB06744  128  L....A......................................................  187
+CAN87018  141  S...........................................................  200
+PC4436    115  S.I.........................................................  174
+AAH57688  131  .....A......................................................  190
+BAC44885  134  L....V......................................................  193
+ABQ85914  114  S...........................................................  173
+AAB28159  129  L....A......................................................  188
+AAD00000  108  L....A............S.........................................  167
+BAI77863  132  L....A......................................................  191
+ABD73925  113  S...........................................................  172
+ABD73927  113  S...........................................................  172
+ABD73931  111  L....A......................................................  170
+ABD73929  111  L....A......................................................  170
+AAH91272  131  M......E..A.........T.LKS.........................A.........  190
+AAH91257  131  S......E..A.........T.LKS.........................A.........  190
+AAH95846  136  M......E..A.........T.LKS.........................A.........  195
+AAH88271  134  L.S....E..A.........T.LKS.........................A.........  193
+AAH92584  137  M......E..A.........T.LKS.........................A.........  196
+BAC30871  27         ......................................................  80
+BAC30871  238    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITNF...DI..E..GQPAENYKN.Q.  299
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+AAK53870  1          ......................................................  54
+AAK53870  212    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  273
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+AAA91897  133  M......E..A.........T.LKS.........................A.........  192
+AAB59664  1          ......................................................  54
+AAB59664  212    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  273
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+AAB59665  1          ......................................................  54
+AAB59665  212    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  273
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+EDL18547  1           .....................................................  53
+EDL18547  211    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  272
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+ABP35935  1           .....................................................  53
+ABP35935  211    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  272
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+P01868    1          ......................................................  54
+P01868    212    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  273
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+P01869    1          ......................................................  54
+P01869    212    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  273
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+AAB59656  1           .....................................................  53
+AAB59656  211    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  272
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+AAH88423  134  M......E..A.........T.LKS.........................A.........  193
+AAB59657  1           .....................................................  53
+AAB59657  211    .I.KT.GR..Q..TIP.PKEQMAKDK.S.T.MITDF...DI..E..GQPAENYKN.Q.  272
+                          \                                  \             
+                          |                                  |             
+                         KA                                 WQ
+AAA91896  140  S......E..A.........T.LKS.........................A.........  199
+AAH88240  131  M......E..A.........T.LKS.........................A.........  190
+AAH92049  135  S...................CGDT.G.S.............S............S.....  194
+AAH03888  138  .I........A........VCGDT.G.S................L...............  197
+BAA03476  135  S......T..A......V..CSDTSG.S.................K..Y.A.....R.VS  194
+ACX70084  134  L....A..............CGDT.G.S.............S............S.....  193
+BAB25349  133  L....A....A........VCGGT.G.S................L...............  192
+CBI70317  148  .L........A........VCGDT.G.S................L...............  207
+AKH40268  134  S......T..A......V..CSDTSG.S.................K..Y.A.....R.VS  193
+AAH18280  130  .I........A........VCGDT.G.S................L...............  189
+AAH18535  137  .I........A........VCGDT.G.S................L...............  196
+S40295    112  S.........A........VCGDT.G.S................L...............  171
+S37483    134  .L........A........VCGDT.G.S................L...............  193
+AAH92061  137  .I........A........VCGGT.G.S................L...............  196
+AAH03878  133  .I........A........VCGDT.G.S................L...............  192
+AIU56800  135  S........KG...F....C.RSTSE.TAA......D........S....A.T.......  194
+AAH92271  133  .I........A........VCGDT.G.S................L...............  192
+AAH57672  129  PI........A........VCGDT.G.S................L...............  188
+AHX42424  133  A.........A........VCGDT.G.S................L...............  192
+AAH94467  133  .I........A........VCGDT.G.S................L.....P.........  192
+AEL29442  131  S...T.....G...F....C.RSTSE.TAA......D........S....A.T.......  190
+AAA51630  116  .L..................CGDT.G.S..S.......................S.....  175
+AFX62604  146  L....A....A........VCGGT.G.S................L...............  205
+AEG80191  130  Q......T..A........A.TTS.TNT.................S....A.T.......  191
+                                   \                                       
+                                   |                                       
+                                  CD
+4WEB_H    132  S.........A........VCGDT.G.S................L...............  191
+ACN59875  131  L....T.S.KG...F....C.RSTSE.TAA......D........S....A.T.......  190
+ABQ85916  111  .L..................CGDT.G.S.............S............S.....  170
+AAT74921  126  .L.....T..A......V..CSDTSG.S.................K..Y.A.....R.VS  185
+CAA47649  132  L....A..............CGDT.G.S..S..........S............S...LS  191
+ACN59874  131  L....T.S.KG...F....S.KSTSGGTAA......D........S....A.T.......  190
+BAR71188  128  L....A..............CGDT.G.S.............S............S.....  187
+BAC85483  137  P....T.S.KG...F....C.RSTSE.TAA......D........S....A.T.......  196
+AAH25447  133  ....................CGDT.G.S.............S............S.....  192
+AAH92269  135  .I..................CGDT.G.S.............S............S.....  194
+AIC63043  129  Q......S.KG...F....S.KSTSGGTAA......D........S....A.T.......  188
+AAG00910  116  .....T.S.KG...F....C.RSTSE.TAA......D........S....A.T.......  175
+BAG62928  136  L.I....S.KG...F....S.KSTSGGTAA......D........S....A.T.......  195
+ABH10632  111  M......S.KG...F....S.KSTSGGTAA......D........S....A.T.......  170
+BAR42291  132  ..........A........VCGGT.G.S................L...............  191
+
+Query     181  AVLQSDLYTLSSSVTVPSSTWPSQTVTCNVAHPASSTKVDKKIVPRDCGCKPCICTVPEV  240
+AAS77396  172  .......................E....................................  231
+CAD88275  195  .......................E....................................  254
+ABD73933  179  .......................E....................................  238
+AAH33451  196  ............................................................  255
+BAQ35526  194  ............................................................  253
+AAH02121  192  ............................................................  251
+AAL76040  197  .......................E....................................  256
+AAH03435  194  .......................E....................................  253
+BAQ25543  191  ............................................................  250
+AHN49951  173  ...................PR..E....................................  232
+ALD84365  188  .......................E....................................  247
+AAP79430  191  .......................E....................................  250
+AGX28126  194  .......................E....................................  253
+AAT74919  190  .......................E....................................  249
+BAL50003  191  .......................E....................................  250
+ADJ93821  193  ............................................................  254
+                   \                                                       
+                   |                                                       
+                  LQ
+CAD32497  191  ...E...............PR..E....................................  250
+CAD32498  191  ...E...............PR..E....................................  250
+1IGY_B    169  ...................PR..E....................................  228
+CAA56280  192  .......................E........................--..........  249
+AAA51043  193  .......................E....................................  252
+AAH24405  200  ............................................................  259
+BAE25911  198  ............................................................  257
+AAH08237  194  ............................................................  253
+AAA75163  192  .......................E....................................  251
+AEK78852  195  .......................E....................................  254
+AAL76038  193  .......................E....................................  252
+ACX70086  190  .......................E....................................  249
+CAD68983  193  ...................PR..E....................................  252
+AAD40243  168  .......................E....................................  227
+4IJ3_C    173  ...E...................E....................................  232
+AAB06744  188  .......................E....................................  247
+CAN87018  201  .......................E....................................  260
+PC4436    175  .......................E....................................  234
+AAH57688  191  ............................................................  250
+BAC44885  194  .......................E....................................  253
+ABQ85914  174  .......................E....................................  233
+AAB28159  189  .......................E....................................  248
+AAD00000  168  .......................E....................................  227
+BAI77863  192  .......................E....................................  251
+ABD73925  173  .......................E....................................  232
+ABD73927  173  .......................E....................................  232
+ABD73931  171  .......................E....................................  230
+ABD73929  171  .......................E....................................  230
+AAH91272  191  .....G....T..........S..A.....................E.--N..G..GS..  248
+AAH91257  191  .....G....T..........S..A.....................E.--N..G..GS..  248
+AAH95846  196  .....G....T...................................N.........GS..  257
+                                                                \          
+                                                                |          
+                                                               GD
+AAH88271  194  .....G....T...................................N.........GS..  255
+                                                                \          
+                                                                |          
+                                                               GD
+AAH92584  197  .....G....T...................................N.........GS..  258
+                                                                \          
+                                                                |          
+                                                               GD
+BAC30871  81   ............................................................  140
+BAC30871  300  IMDTDGS.FVY.KLN.QK.N.EAN.F..S.L.                              332
+                                      \                                    
+                                      |                                    
+                                      G
+AAK53870  55   .......................E....................................  114
+AAK53870  274  IMDTDGS.FVY.KLN.QK.N.EAN.F..S.L.                              306
+                                      \                                    
+                                      |                                    
+                                      G
+AAA91897  193  .....G....T..........S..A.....................E.--N..G..GS..  250
+AAB59664  55   .......................E....................................  114
+AAB59664  274  IMDTDGS.FVY.KLN.QK.N.EAN.F..S.L.                              306
+                                      \                                    
+                                      |                                    
+                                      G
+AAB59665  55   .......................E....................................  114
+AAB59665  274  IMDTDGS.FVY.KLN.QK.N.EAN.F..S.L.                              306
+                                      \                                    
+                                      |                                    
+                                      G
+EDL18547  54   .......................E....................................  113
+EDL18547  273  IMDTDGS.FVY.KLN.QK.N.EAN.F..S.L.                              305
+                                      \                                    
+                                      |                                    
+                                      G
+ABP35935  54   .......................E....................................  113
+ABP35935  273  IMDTDGS.FVY.KLN.QK.N.EAN.F..S.L.                              305
+                                      \                                    
+                                      |                                    
+                                      G
+P01868    55   ...................PR..E....................................  114
+P01868    274  IMNTNGS.FVY.KLN.QK.N.EAN.F..S.L.                              306
+                                      \                                    
+                                      |                                    
+                                      G
+P01869    55   ...................PR..E....................................  114
+P01869    274  IMNTNGS.FVY.KLN.QK.N.EAN.F..S.L.                              306
+                                      \                                    
+                                      |                                    
+                                      G
+AAB59656  54   ...E...............PR..E....................................  113
+AAB59656  273  IMNTNGS.FVY.KLN.QK.N.EAN.F..S.L.                              305
+                                      \                                    
+                                      |                                    
+                                      G
+AAH88423  194  .....G....T..........S..A.....................E.--N..G..GS..  251
+AAB59657  54   ...E...............PR..E....................................  113
+AAB59657  273  IMNTNGS.FVY.KLN.QK.N.EAN.F..S.L.                              305
+                                      \                                    
+                                      |                                    
+                                      G
+AAA91896  200  .....G....T..........S..A.....................E.--N..G..GS..  257
+AAH88240  191  .....G....T..........S..A.....................E.--N..G..GS..  248
+AAH92049  195  .L...G...M..................S........T....LE.SGNP.P..K.PA.NL  263
+                                                              \      \     
+                                                              |      |     
+                                                          PISTI   ECHK
+AAH03888  198  ................T.......SI.................E..G----.T.KPC.PC  253
+BAA03476  195  S....GF.S...L.............I........K.ELI.R.E..GSS.P.G.LGG.--  261
+                                                             \      \      
+                                                             |      |      
+                                                      IPKPSTPP      N
+ACX70084  194  .L...G...M..................S........T....LE.SGNP.P..K.PA.NL  262
+                                                              \      \     
+                                                              |      |     
+                                                          PISTI   ECHK
+BAB25349  193  .L...G..........T.N......I.................E..QNP.P.LK.AA.DL  260
+                                                             \       \     
+                                                             |       |     
+                                                          VPIT    ECPP
+CBI70317  208  ................T.......SI.................E..G----.T.KPC.PC  263
+AKH40268  194  S....GF.S...L.............I........K.ELI.R.E..GSS.P.G--NILGG  259
+                                                             \             
+                                                             |             
+                                                      IPKPSTPP
+AAH18280  190  ................T.......SI.................E..G----.T.KPC.PC  245
+AAH18535  197  ................T.......SI.................E..G----.T.KPC.PC  252
+S40295    172  ................T.......SI.................E..G----.T.KPC.PC  227
+S37483    194  ................T.......SI.................E..G----.T.KPC.PC  249
+AAH92061  197  .L...G..........T.N......I.................E..QNP.P.LK.AA.DL  264
+                                                             \       \     
+                                                             |       |     
+                                                          VPIT    ECPP
+AAH03878  193  ................T.......SI.................E..G----.T.KPC.PC  248
+AIU56800  195  .....S..S...V......SLGTK.Y....D.KP.N.....RVESK-Y.PPCPP.PA..F  254
+                     \                                                     
+                     |                                                     
+                     G
+AAH92271  193  ................T.......SI.................E..G----.T.KPC.PC  248
+AAH57672  189  V...............T.......SI.................E..G----.T.KPC.PC  244
+AHX42424  193  ................T.......SI.................E..G----.T.KPC.PC  248
+AAH94467  193  ................T.......SI.................E..G----.T.KPC.PC  248
+AEL29442  191  .....S..S...V......SLGTK.Y....D.KP.N.....RVESK-Y.PPCPP.PA..F  250
+                     \                                                     
+                     |                                                     
+                     G
+AAA51630  176  .L...G...M..................S........T....LE.SGNP.P..K.PA.NL  244
+                                                              \      \     
+                                                              |      |     
+                                                          PISTI   ECHK
+AFX62604  206  .L...G..........T.N......I.................E..P.E.P..-ADLLGG  274
+                                                             \ \           
+                                                             | |           
+                                                        VPITQN PPLK
+AEG80191  192  S..H.G..S....................................G.S.....T.PG...  252
+                                                              \            
+                                                              |            
+                                                              G
+4WEB_H    192  ................T.......SI.................E..G----.T.KPC.PC  247
+ACN59875  191  .....S..S...V......NFGT..Y....D.KP.N.....TVERKC.VEC.PCPAP.VA  251
+                     \                                                     
+                     |                                                     
+                     G
+ABQ85916  171  .L...G...M..................S........T....LE.SGNP.P..K.PA.NL  239
+                                                              \      \     
+                                                              |      |     
+                                                          PISTI   ECHK
+AAT74921  186  S....GF.S...L.............I........K.ELI.R.E..GSS.P.G.LGG.--  252
+                                                             \      \      
+                                                             |      |      
+                                                      IPKPSTPP      N
+CAA47649  193  .L...G...M..................S........T....LE.SGNP.P..K.PA.NL  261
+               \                                              \      \     
+               |                                              |      |     
+               Q                                          PISTI   ECHK
+ACN59874  191  .....S..S...V......SLGT..YI...N.KP.N.....RVE.KS.D.P..--PA..L  253
+                     \                                          \          
+                     |                                          |          
+                     G                                       KTHT
+BAR71188  188  .L...G...M..................S........T....LE.SGNP.P..K.PA.NL  256
+                                                              \      \     
+                                                              |      |     
+                                                          PISTI   ECHK
+BAC85483  197  .....S..S...V......NFGT..Y....D.KP.N.....TVERKC.VEC.PCPAP.VA  257
+                     \                                                     
+                     |                                                     
+                     G
+AAH25447  193  .L...G...M..................S........T....LE.SGNP.P..K.PA.NL  261
+                                                              \      \     
+                                                              |      |     
+                                                          PISTI   ECHK
+AAH92269  195  .L...G...M..................S........T....LE.SGNP.P..K.PA.NL  263
+                                                              \      \     
+                                                              |      |     
+                                                          PISTI   ECHK
+AIC63043  189  .....S..S...V......SLGT..YI...N.KP.N......VE.KS.D.P..--PA..L  251
+                     \                                          \          
+                     |                                          |          
+                     G                                       KTHT
+AAG00910  176  .....S..S...V......NFGT..Y....D.KP.N.....TVERKC.VEC.PCPAP.VA  236
+                     \                                                     
+                     |                                                     
+                     G
+BAG62928  196  .....S..S...V......SLGT..YI...N.KP.N......VE.KS.D.P..--PA..L  258
+                     \                                          \          
+                     |                                          |          
+                     G                                       KTHT
+ABH10632  171  .....S..S...V......SLGT..YI...N.KP.N.....RVE.KS.D.P..--PA..L  233
+                     \                                          \          
+                     |                                          |          
+                     G                                       KTHT
+BAR42291  192  .L...G..........T.N......I.................E..QNP.P.LK.AA.DL  259
+                                                             \       \     
+                                                             |       |     
+                                                          VPIT    ECPP
+
+Query     241  SSVFIFPPKPKDVLTITLTPKVTCVVVDISKDDPEVQFSWFVDDVEVHTAQTKPREEQIN  300
+AAS77396  232  ....................................................Q.....F.  291
+CAD88275  255  ....................................................Q.....F.  314
+ABD73933  239  ....................................................Q.....F.  298
+AAH33451  256  ..........................................................F.  315
+BAQ35526  254  ............................................................  313
+AAH02121  252  ..........................................................F.  311
+AAL76040  257  ....................................................Q.....F.  316
+AAH03435  254  ....................................................Q.....F.  313
+BAQ25543  251  ............................................................  310
+AHN49951  233  ....................................................Q.....F.  292
+ALD84365  248  ....................................................Q.....F.  307
+AAP79430  251  ....................................................Q.....F.  310
+AGX28126  254  ....................................................Q.....F.  313
+AAT74919  250  ....................................................Q.....F.  309
+BAL50003  251  ....................................................Q.....F.  310
+ADJ93821  255  ............................................................  314
+CAD32497  251  ....................................................Q.....F.  310
+CAD32498  251  ....................................................Q.....F.  310
+1IGY_B    229  ............T.L..V.........................N........Q.....F.  288
+CAA56280  250  ....................................................Q.....F.  309
+AAA51043  253  ....................................................Q.....F.  312
+AAH24405  260  ..........................................................F.  319
+BAE25911  258  ............................................................  317
+AAH08237  254  ..........................................................F.  313
+AAA75163  252  ....................................................Q.....F.  311
+AEK78852  255  ....................................................Q.....F.  314
+AAL76038  253  ....................................................Q.....F.  312
+ACX70086  250  ....................................................Q.....F.  309
+CAD68983  253  ....................................................Q.....F.  312
+AAD40243  228  ....................................................Q.....F.  287
+4IJ3_C    233  ....................................................Q.....F.  292
+AAB06744  248  ....................................................Q.....F.  307
+CAN87018  261  ....................................................Q.....F.  320
+PC4436    235  ....................................................Q.....F.  294
+AAH57688  251  ..........................................................F.  310
+BAC44885  254  ....................................................Q.....F.  313
+ABQ85914  234  ....................................................Q.....F.  293
+AAB28159  249  ....................................................Q.....F.  308
+AAD00000  228  ....................................................Q.....F.  287
+BAI77863  252  ....................................................Q.....F.  311
+ABD73925  233  ....................................................Q.....F.  292
+ABD73927  233  ....................................................Q.....F.  292
+ABD73931  231  ....................................................Q.....F.  290
+ABD73929  231  ....................................................Q.....F.  290
+AAH91272  249  .........T....................QN....R....I..........HAP.K.S.  308
+AAH91257  249  .........T....................QN....R....I..........HAP.K.S.  308
+AAH95846  258  ..............................Q.....H...............R.P...F.  317
+AAH88271  256  ..............................Q.....H...............R.P...F.  315
+AAH92584  259  ..............................Q.....H...............R.P...F.  318
+BAC30871  141  ............................................................  200
+AAK53870  115  ....................................................Q.....F.  174
+AAA91897  251  .........T....................QN....R....I..........HAP.K.S.  310
+AAB59664  115  ....................................................Q.....F.  174
+AAB59665  115  ....................................................Q.....F.  174
+EDL18547  114  ....................................................Q.....F.  173
+ABP35935  114  ....................................................Q.....F.  173
+P01868    115  ....................................................Q.....F.  174
+P01869    115  ....................................................Q.....F.  174
+AAB59656  114  ....................................................Q.....F.  173
+AAH88423  252  .........T....................QN....R....I..........HAP.K.S.  311
+AAB59657  114  ....................................................Q.....F.  173
+AAA91896  258  .........T....................QN....R....I..........HAP.K.S.  317
+AAH88240  249  .........T....................QN....R....I..........HAP.K.S.  308
+AAH92049  264  E.......NI....M.S...........V.E...D..I....NN........QTHR.DY.  326
+                \                                                          
+                |                                                          
+               GGP
+AAH03888  254  K........I....M.S.S.M.......V.E...D..I....NN...L....QTHR.DY.  323
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+BAA03476  262  -...........A.M.S...........V.E...D.HV.....NK.....W.Q...A.Y.  320
+ACX70084  263  E.......NI....M.S...........V.E...D..I....NN........QTHR.DY.  325
+                \                                                          
+                |                                                          
+               GGP
+BAB25349  264  P........I....M.S.S.M.......V.E...D..I....NN........QTHR.DY.  323
+               \                                                           
+               |                                                           
+               LGG
+CBI70317  264  K........I....M.S.S.I.......V.E...D..I....NN........QTHR.DY.  333
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+AKH40268  260  P...........A.M.S...........V.E...D.HV.....NK.....W.Q...A.Y.  319
+AAH18280  246  K........I....M.S.S.M.......V.E...D..I....NN...L....QTHR.DY.  315
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+AAH18535  253  K........I....M.S.S.M.......V.E...D..I....NN...L....QTHR.DY.  322
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+S40295    228  K........I....M.S.S.M.......V.E...D..I....NN...L....QTHR.DY.  297
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+S37483    250  K........I....M.S.S.I.......V.E...D..I....NN........QTHR.DY.  319
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+AAH92061  268  P........I....M.S.S.M.......V.E...D..I....NN........QTHR.DY.  327
+               \                                                           
+               |                                                           
+               LGG
+AAH03878  249  K........I....M.S.S.M.......V.E...D..I....NN...L....QTHR.DY.  318
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+AIU56800  255  E...L.......T.M.SR..E.......V.QE......N.Y..G....N.K.......F.  317
+                \                                                          
+                |                                                          
+               GGP
+AAH92271  249  K........I....M.S.S.M.......V.E...D..I....NN...L....QTHR.DY.  318
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+AAH57672  245  K........I....M.S.S.M.......V.E...D..I....NN...L....QTHR.DY.  314
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+AHX42424  249  K........I....M.S.S.I.......V.E...D..I....NN........QTHR.DY.  318
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+AAH94467  249  K........I....M.S.S.M.......V.E...D..I....NN...L....QTHR.DY.  318
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+AEL29442  251  E...L.......T.M.SR..E.......V.QE......N.Y..G....N.K.......F.  313
+                \                                                          
+                |                                                          
+               GGP
+AAA51630  245  E.......NI....M.S...........V.E...D..I....NN........QTHR.DY.  307
+                \                                                          
+                |                                                          
+               GGP
+AFX62604  275  P........I....M.S.S.M.......V.E...D..I....NN........QTHR.DY.  334
+AEG80191  253  ................S.S...........Q..........I.GK.....V.Q.....F.  312
+4WEB_H    248  K........I....M.S.S.I.......V.E...D..I....NN........QTHR.DY.  317
+                \                                                          
+                |                                                          
+               CPAPNLLGGP
+ACN59875  252  G...L.......T.M.SR..E.......V.HE......N.Y..G....N.K.......F.  312
+                \                                                          
+                |                                                          
+                P
+ABQ85916  240  E.......NI....M.S...........V.E...D..I....NN........QTHR.DY.  302
+                \                                                          
+                |                                                          
+               GGP
+AAT74921  253  -...........A.M.S...........V.E...D.HV.....NK.....W.Q...A.Y.  311
+CAA47649  262  E.......NI....M.S...........V.E...D..I....NN........QTHR.DY.  324
+                \                                                          
+                |                                                          
+               GGP
+ACN59874  257  P...L.......T.M.SR..E.......V.HE....K.N.Y..G....N.K.......Y.  316
+               \                                                           
+               |                                                           
+               LGG
+BAR71188  257  E.......NI....M.S...........V.E...D.RI....NN........QTHR.DY.  319
+                \                                                          
+                |                                                          
+               GGP
+BAC85483  258  G...L.......T.M.SR..E.......V.HE......N.Y..G....N.K.......F.  318
+                \                                                          
+                |                                                          
+                P
+AAH25447  262  E.......NI....M.S...........V.E...D..I....NN........QTHR.DY.  324
+                \                                                          
+                |                                                          
+               GGP
+AAH92269  264  E.......NI....M.S...........V.E...D..I....NN........QTHR.DY.  326
+                \                                                          
+                |                                                          
+               GGP
+AIC63043  255  P...L.......T.M.SR..E.......V.HE....K.N.Y..G....N.K.......Y.  314
+               \                                                           
+               |                                                           
+               LGG
+AAG00910  237  G...L.......T.M.SR..E.......V.HE......N.Y..G....N.K.......F.  297
+                \                                                          
+                |                                                          
+                P
+BAG62928  262  P...L.......T.M.SR..E.......V.HE....K.N.Y..G....N.K.......Y.  321
+               \                                                           
+               |                                                           
+               LGG
+ABH10632  237  P...L.......T.M.SR..E.......V.HE....K.N.Y..G....N.K.......Y.  296
+               \                                                           
+               |                                                           
+               LGG
+BAR42291  263  P........I....M.S.S.M.......V.E...D..I....NN........QTHR.DY.  322
+               \                                                           
+               |                                                           
+               LGG
+
+Query     301  STFRSVSELPIMHQDWLNGKEFKCRVNSAAFPAPIEKTISKTKGRPKAPQVYTIPPPKEQ  360
+AAS77396  292  ............................................................  351
+CAD88275  315  ............................................................  374
+ABD73933  299  ............................................................  358
+AAH33451  316  ............................................................  375
+BAQ35526  314  ............................................................  373
+AAH02121  312  ............................................................  371
+AAL76040  317  ................................................S...........  376
+AAH03435  314  ............................................................  373
+BAQ25543  311  ............................................................  370
+AHN49951  293  ............................................................  352
+ALD84365  308  ............................................................  367
+AAP79430  311  ............................................................  370
+AGX28126  314  ............................................................  373
+AAT74919  310  ............................................................  369
+BAL50003  311  ............................................................  370
+ADJ93821  315  ............................................................  374
+CAD32497  311  ............................................................  370
+CAD32498  311  ............................................................  370
+1IGY_B    289  ....V..A....................................K.R.............  348
+CAA56280  310  ............................................................  369
+AAA51043  313  ............................................................  372
+AAH24405  320  ............................................................  379
+BAE25911  318  ............................................................  377
+AAH08237  314  ............................................................  373
+AAA75163  312  ............................................................  371
+AEK78852  315  ............................................................  374
+AAL76038  313  ................................................S...........  372
+ACX70086  310  ............................................................  369
+CAD68983  313  ............................................................  372
+AAD40243  288  ............................................................  347
+4IJ3_C    293  ............................................................  352
+AAB06744  308  ............................................................  367
+CAN87018  321  ................P...........................................  380
+PC4436    295  ............................................................  354
+AAH57688  311  ............................................................  370
+BAC44885  314  ............................................................  373
+ABQ85914  294  ............................................................  353
+AAB28159  309  ............................................................  368
+AAD00000  288  ............................................................  347
+BAI77863  312  ............................................................  371
+ABD73925  293  ............................................................  352
+ABD73927  293  ............................................................  352
+ABD73931  291  ............................................................  350
+ABD73929  291  ............................................................  350
+AAH91272  309  ..L........V.R......T...K...G........S...PE.T.RG.....MA....E  368
+AAH91257  309  ..L........V.R......T...K...G........S...PE.T.RG.....MA....E  368
+AAH95846  318  ...........L.......RT.R.K.T.....S........PE..TQV.H...MS.T..E  377
+AAH88271  316  ...........L.......RT.R.K.T.....S........PE..TQV.H...MS.T..E  375
+AAH92584  319  ...........L.......RT.R.K.T.....S........PE..TQV.H...MS.T..E  378
+BAC30871  201  ............................................................  260
+AAK53870  175  ............................................................  234
+AAA91897  311  ..L........V.R......T...K...G........S...PE.T.RG.....MA....E  370
+AAB59664  175  ............................................................  234
+AAB59665  175  ............................................................  234
+EDL18547  174  ............................................................  233
+ABP35935  174  ............................................................  233
+P01868    175  ............................................................  234
+P01869    175  ............................................................  234
+AAB59656  174  ............................................................  233
+AAH88423  312  ..L........V.R......T...K...G........S...PE.T.RG.....MA....E  371
+AAB59657  174  ............................................................  233
+AAA91896  318  ..L........V.R......T...K...G........S...PE.T.RG.....MA....E  377
+AAH88240  309  ..L........V.R......T...K...G........S...PE.T.RG.....MA....E  368
+AAH92049  327  ..I.V..A...Q....MS......K..NKDL.S...R....I..LVR.....IL...A..  386
+AAH03888  324  ..L.V..A...Q....MS......K..NK.L.....R....P..SVR.....VL...E.E  383
+BAA03476  321  ....V..A...Q....MR......K..NK.L.....R....P...AQT.........R..  380
+ACX70084  326  ..I.V..T...Q....MS......K..NKDL.S...R....I..LVR.....IL...A..  385
+BAB25349  324  ..L.V..A...Q....MS......K..NR.L.S........PR.PVR.....VL...A.E  383
+CBI70317  334  ..L.V..A...Q....MS......K..NKDL.....R....P..SVR.....VL...E.E  393
+AKH40268  320  ....V..A...Q....MR......K..NK.L.....R....P...AQT.........R..  379
+AAH18280  316  ..L.V..A...Q....MS......K..NK.L.....R....P..SVR.....VL...E.E  375
+AAH18535  323  ..L.V..A...Q....MS......K..NK.L.....R....P..SVR.....VL...E.E  382
+S40295    298  ..L.V..A...Q....MS......K..NKDL.....R....P..SVR.....VL...E.E  357
+S37483    320  ..L.V..A...Q....MS......K..NKDL.....R....P..SVR.....VL...E.E  379
+AAH92061  328  ..L.V..A...Q....MS......K..NR.L.S........PR.PVR.....VL...A.E  387
+AAH03878  319  ..L.V..A...Q....MS......K..NK.L.....R....P..SVR.....VL...E.E  378
+AIU56800  318  ..Y.V..V.TVL.........Y..K.SNKGL.SS.......A..Q.RE.....L..SQ.E  377
+AAH92271  319  ..L.V..A...Q....MS......K..NK.L.....R....P..SVR.....VL...E.E  378
+AAH57672  315  ..L.V..A...Q....MS......K..NK.L.....R....P..SVR.....VL...E.E  374
+AHX42424  319  ..L.V..A...Q....MS......K..NKDL.....R....P..SVR.....VL...E.E  378
+AAH94467  319  ..L.V..A...Q....MS......K..NK.L.....R....P..SVR.....VL...E.E  378
+AEL29442  314  ..Y.V..V.TVL.........Y..K.SNKGL.SS.......A..Q.RE.....L..SQ.E  373
+AAA51630  308  ..I.V..T...Q....MS......K..NKDL.S...R....I..LVR......L...A..  367
+AFX62604  335  ..L.V..A...Q....MS......K..NR.L.S........PR.PVR.....VL...A.E  394
+AEG80191  313  ..Y.M..V...L............K...P...V........RR.QLQV.....M......  372
+4WEB_H    318  ..L.V..A...Q....MS......K..NKDL.....R....P..SVR.....VL...E.E  377
+ACN59875  313  ....V..V.TVV.........Y..K.SNKGL.............Q.RE.....L..SR.E  372
+ABQ85916  303  ..I.V..T...Q....MS......K..NKDL.S...R....I..LVR.....IL...A..  362
+AAT74921  312  ....V..A...Q....MR......K..NK.L.....R....P...AQT.........R..  371
+CAA47649  325  ..I.V..T...Q....MS......K..NKDL.S...R....I..LVR.....IL...A..  384
+ACN59874  317  ..Y.V..V.TVL.........Y..K.SNK.L..........A..Q.RE.....L..SR.E  376
+BAR71188  320  ..I.V..A...Q....MS......K..NKDL.S...R....I..LVR.....IL...A..  379
+BAC85483  319  ....V..V.TVV.........Y..K.SNKGL.............Q.RE.....L..SR.E  378
+AAH25447  325  ..I.V..A...Q....MS......K..NKDL.S...R....I..LVR.....IL...A..  384
+AAH92269  327  ..I.V..A...Q....MS......K..NKDL.S...R....I..LVR.....IL...A..  386
+AIC63043  315  ..Y.V..V.TVL.........Y..K.SNK.L..........A..Q.RE.....L..SRDE  374
+AAG00910  298  ....V..V.TVV.........Y..K.SNKGL.............Q.RE.....L..SR.E  357
+BAG62928  322  ..Y.V..V.TVL.........Y..K.SNK.L..........A..Q.RE.....L..SRDE  381
+ABH10632  297  ..Y.V..V.TVL.........Y..K.SNK.L..........A..Q.RE.....L..SR.E  356
+BAR42291  323  ..L.V..A...Q....MS......K..NR.L.S........PR.PVR.....VL...A.E  382
+
+Query     361  MAKDKVSLTCMITNFFPEDITVEWQWNGQPAENYKNTQPIMDTDGSYFVYSKLNVQKSNW  420
+AAS77396  352  .............D..............................................  411
+CAD88275  375  .............D..............................................  434
+ABD73933  359  .............D..............................................  418
+AAH33451  376  .............D..............................................  435
+BAQ35526  374  ............................................................  433
+AAH02121  372  .............D..............................................  431
+AAL76040  377  .............D..............................................  436
+AAH03435  374  .............D..................................I...........  433
+BAQ25543  371  ............................................................  430
+AHN49951  353  .............D...........................N.N................  412
+ALD84365  368  .............D..............................................  427
+AAP79430  371  .............D..............................................  430
+AGX28126  374  .............D..............................................  433
+AAT74919  370  .............D..............................................  429
+BAL50003  371  .............D..............................................  430
+ADJ93821  375  ............................................................  434
+CAD32497  371  .............D...........................N.N................  430
+CAD32498  371  .............D...........................N.N................  430
+1IGY_B    349  .............D...........SD..AP.............................  408
+CAA56280  370  .............D..............................................  429
+AAA51043  373  .............D...........................N.N................  432
+AAH24405  380  .............D..............................................  439
+BAE25911  378  ............................................................  437
+AAH08237  374  .............D..............................................  433
+AAA75163  372  .............D..............................................  431
+AEK78852  375  .............D..............................................  434
+AAL76038  373  .............D..............................................  432
+ACX70086  370  .............D..............................................  429
+CAD68983  373  .............D...........................N.N................  432
+AAD40243  348  .............D..............................................  407
+4IJ3_C    353  .............D...........................N.N................  412
+AAB06744  368  .............D..............................................  427
+CAN87018  381  .............D...........................N.N................  440
+PC4436    355  .............D..............................................  414
+AAH57688  371  .............D..............................................  430
+BAC44885  374  .............D..............................................  433
+ABQ85914  354  .............D..............................................  413
+AAB28159  369  .............D..............................................  428
+AAD00000  348  .............D............................S.................  407
+BAI77863  372  .............D..............................................  431
+ABD73925  353  .............D..............................................  412
+ABD73927  353  .............D..............................................  412
+ABD73931  351  .............D..............................................  410
+ABD73929  351  .............D..............................................  410
+AAH91272  369  .TQSQ..I...VKG.Y.P..YT..KM....Q......P.T........L......K.ET.  428
+AAH91257  369  .TQSQ..I...VKG.Y.P..YT..KM....Q......P.T........L......K.ET.  428
+AAH95846  378  .TQNE..I...VKG.Y.P..Y....M....Q......P.T........L......K.EK.  437
+AAH88271  376  .TQNE..I...VKG.Y.P..Y....M....Q......P.T........L......K.EK.  435
+AAH92584  379  .TQNE..I...VKG.Y.P..Y....M....Q......P.T........L......K.EK.  438
+BAC30871  261  ............................................................  320
+AAK53870  235  .............D..............................................  294
+AAA91897  371  .TQSQ..I...VKG.Y.P..YT..KM....Q......P.T........L......K.ET.  430
+AAB59664  235  .............D..............................................  294
+AAB59665  235  .............D..............................................  294
+EDL18547  234  .............D..............................................  293
+ABP35935  234  .............D..............................................  293
+P01868    235  .............D...........................N.N................  294
+P01869    235  .............D...........................N.N................  294
+AAB59656  234  .............D...........................N.N................  293
+AAH88423  372  .TQSQ..I...VKG.Y.P..YT..KM....Q......P.T........L......K.ET.  431
+AAB59657  234  .............D...........................N.N................  293
+AAA91896  378  .TQSQ..I...VKG.Y.P..YT..KM....Q......P.T........L......K.ET.  437
+AAH88240  369  .TQSQ..I...VKG.Y.P..YT..KM....Q......P.T........L......K.ET.  428
+AAH92049  387  LSRKD.....LVVG.N.G..S...TS..HTE....D.A.VL.S.....I....DIKT.K.  446
+AAH03888  384  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  443
+BAA03476  381  .S.K......LV....S.A.S...ER..ELEQD....P..L.S..T..L....T.DTDS.  440
+ACX70084  386  LSRKD.....LVVG.N.G..S...TS..HTE....D.A.VL.S.....I.....MKT.K.  445
+BAB25349  384  .T.KEF.......G.L.AE.A.D.TS..RTEQ.....ATVL.S.....M....R....T.  443
+CBI70317  394  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  453
+AKH40268  380  .S.K......LV....S.A.S...ER..ELEQD....P..L.S..T..L....T.DTDS.  439
+AAH18280  376  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  435
+AAH18535  383  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  442
+S40295    358  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  417
+S37483    380  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  439
+AAH92061  388  .T.KEF.......G.L.AE.A.D.TS..RTEQ.....ATVL.S.....M....R....T.  447
+AAH03878  379  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  438
+AIU56800  378  .T.NQ.....LVKG.Y.S..A...ES....EN...T.P.VL.S...F.L..R.T.D..R.  437
+AAH92271  379  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  438
+AAH57672  375  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  434
+AHX42424  379  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  438
+AAH94467  379  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  438
+AEL29442  374  .T.NQ.....LVKG.Y.S..A...ES....EN...T.P.VL.S...F.L..R.T.D..R.  433
+AAA51630  368  LSRKD.....LVVG.N.G..S...TS..HTE....D.A.VL.S.....I.....MKT.K.  427
+AFX62604  395  .T.KEF.......G.L.AE.A.D.TS..RTEQ.....ATVL.S.....M....R....T.  454
+AEG80191  373  LTQSQ.......KG.Y....D.A..K....EQSF...P.VL...ET..L....D.K.DD.  432
+4WEB_H    378  .T.KQ.T....V.D.M....Y...TN..KTEL.....E.VL.S.....M....R.E.K..  437
+ACN59875  373  .T.NQ.....LVKG.Y.S..A...ES....EN...T.P.ML.S...F.L....T.D..R.  432
+ABQ85916  363  LSRKD.....LVVG.N.G..S...TS..HTE....D.A.VL.S.....I.....MKT.K.  422
+AAT74921  372  .S.K......LV....S.A.S...ER..ELEQD....P..L.S..T..L....T.DTDS.  431
+CAA47649  385  LSRKD.....LVVG.N.G..S...TS..HTE....D.A.VL.S.....I.....MKT.K.  444
+ACN59874  377  .T.NQ.....LVKG.Y.S..A...ES....EN...T.P.VL.S...F.L....T.D..R.  436
+BAR71188  380  LSRKD.....LVVG.N.G..S...TS..HTE....D.A.VL.S.....I....DIKT.K.  439
+BAC85483  379  .T.NQ.....LVKG.Y.S..A...ES....EN...T.P.ML.S...F.L....T.D..R.  438
+AAH25447  385  LSRKD.....LVVG.N.G..S...TS..HTE....D.A.VL.S.....I....DIKT.K.  444
+AAH92269  387  LSRED.....LVVG.N.G..S...TS..HTE....D.A.VL.S.....I....DIKT.K.  446
+AIC63043  375  LT.NQ.....LVKG.Y.S..A...ES....EN...T.P.VL.S...F.L....T.D..R.  434
+AAG00910  358  .T.NQ.....LVKG.Y.S..A...ES....EN...T.P.ML.S...F.L....T.D..R.  417
+BAG62928  382  LT.NQ.....LVKG.Y.S..A...ES....EN...T.P.VL.S...F.L....T.D..R.  441
+ABH10632  357  .T.NQ.....LVKG.Y.S..A...ES....EN...T.P.VL.S...F.L....T.D..R.  416
+BAR42291  383  .T.KEF.......G.L.AE.A.D.TS..RTEQ.....ATVL.S.....M....R....T.  442
+
+Query     421  EAGNTFTCSVLHEGLHNHHTEKSLSHSPGK  450
+AAS77396  412  ..............................  441
+CAD88275  435  ..............................  464
+ABD73933  419  ..............................  448
+AAH33451  436  ..............................  465
+BAQ35526  434  ..............................  463
+AAH02121  432  ..............................  461
+AAL76040  437  ..............................  466
+AAH03435  434  ..............................  463
+BAQ25543  431  ..............................  460
+AHN49951  413  ..............................  442
+ALD84365  428  ..............................  457
+AAP79430  431  ..............................  460
+AGX28126  434  ..............................  463
+AAT74919  430  ..............................  459
+BAL50003  431  ....X.........................  460
+ADJ93821  435  ..............................  464
+CAD32497  431  ..............................  460
+CAD32498  431  .............................   459
+1IGY_B    409  ..........................      434
+CAA56280  430  ..............................  459
+AAA51043  433  ..............................  462
+AAH24405  440  ..............................  469
+BAE25911  438  ..............................  467
+AAH08237  434  ..............................  463
+AAA75163  432  ..............................  461
+AEK78852  435  ..............................  464
+AAL76038  433  ..............................  462
+ACX70086  430  ..............................  459
+CAD68983  433  ..............................  462
+AAD40243  408  ......................N.......  437
+4IJ3_C    413  ..............................  442
+AAB06744  428  ..............................  457
+CAN87018  441  ..............................  470
+PC4436    415  ..............................  444
+AAH57688  431  ..............................  460
+BAC44885  434  ..............................  463
+ABQ85914  414  ..............................  443
+AAB28159  429  ..............................  458
+AAD00000  408  ..............................  437
+BAI77863  432  ..............................  461
+ABD73925  413  ..............................  442
+ABD73927  413  ..............................  442
+ABD73931  411  ..............................  440
+ABD73929  411  ..............................  440
+AAH91272  429  QQ............................  458
+AAH91257  429  QQ............................  458
+AAH95846  438  QQ............................  467
+AAH88271  436  QQ............................  465
+AAH92584  439  QQ............................  468
+BAC30871  321  .............................   349
+AAK53870  295  ..............................  324
+AAA91897  431  QQ............................  460
+AAB59664  295  .............................   323
+AAB59665  295  ..............................  324
+EDL18547  294  ..............................  323
+ABP35935  294  .............................   322
+P01868    295  ..............................  324
+P01869    295  .............................   323
+AAB59656  294  ..............................  323
+AAH88423  432  QQ............................  461
+AAB59657  294  .............................   322
+AAA91896  438  QQ............................  467
+AAH88240  429  QQ............................  458
+AAH92049  447  .KTDS.S.N.R....K.YYLK.TI.R....  476
+AAH03888  444  VER.SYS...V.........T..F.RT...  473
+BAA03476  441  LQ.EI.....V..A......Q.N..R....  470
+ACX70084  446  .KTDS.S.N.R....K.YYLK.TI.R....  475
+BAB25349  444  .R.SL.A...V.......L.T.TI.R.L..  473
+CBI70317  454  VER.SYS...V.........T..F.RT...  483
+AKH40268  440  LQ.EI.....V..A......Q.N..R....  469
+AAH18280  436  VER.SYS...V.........T..F.RT...  465
+AAH18535  443  VER.SYS...V.........T..F.RT...  472
+S40295    418  VER.SYS...V.........T..F.RT..   446
+S37483    440  VER.SYS...V.........T..F.RT...  469
+AAH92061  448  .R.SL.A...V.......L.T.TI.R.L..  477
+AAH03878  439  VER.SYS...V.........T..F.RT...  468
+AIU56800  438  QE..V.S...M..A....Y.Q....L.L..  467
+AAH92271  439  VER.SYS...V.........T..F.RT...  468
+AAH57672  435  VER.SYS...V.........T....RT...  464
+AHX42424  439  VER.SYS...V.........T..F.RT...  468
+AAH94467  439  VER.SYS...V.........T..F.RT...  468
+AEL29442  434  QE..V.S...M..A....Y.Q....L.L..  463
+AAA51630  428  .KTDS.S.N.R....K.YYLK.TI.R....  457
+AFX62604  455  .R.SL.A...V.......L.T.TI.R.L..  484
+AEG80191  433  .K.D......V..A........T..QR...  462
+4WEB_H    438  VER.SYS...V.........T..F.RT...  467
+ACN59875  433  QQ..V.S...M..A....Y.Q....L....  462
+ABQ85916  423  .KTDS.S.N.R....K.YYLK.TI.R....  452
+AAT74921  432  LQ.EI.....V..A......Q.N..R....  461
+CAA47649  445  .KTDS.S.N.R....K.YYLK.TI.R....  474
+ACN59874  437  QQ..V.S...M..A....Y.Q....L....  466
+BAR71188  440  .KTDS.S.N.R....K.YYLK.TI.R....  469
+BAC85483  439  QQ..V.S...M..A....Y.Q....L....  468
+AAH25447  445  .KTDS.S.N.R....K.YYLK.TI.R....  474
+AAH92269  447  .KTDS.S.N.R....K.YYLK.TI.R....  476
+AIC63043  435  QQ..V.S...M..A....Y.Q....L....  464
+AAG00910  418  QQ..V.S...M..A....Y.Q....L....  447
+BAG62928  442  QQ..V.S...M..A....Y.Q....L....  471
+ABH10632  417  QQ..V.S...M..A....Y.Q....L....  446
+BAR42291  443  .R.SL.A...V.......L.T.TI.R.L..  472
+
+  Database: All non-redundant GenBank CDS translations+PDB+SwissProt+PIR+PRF
+excluding environmental samples from WGS projects
+    Posted date:  Oct 11, 2015  2:03 PM
+  Number of letters in database: 26,613,539,447
+  Number of sequences in database:  73,055,898
+
+Lambda      K        H
+   0.314    0.128    0.397 
+Gapped
+Lambda      K        H
+   0.267   0.0410    0.140 
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Number of Sequences: 73055898
+Number of Hits to DB: 1233321472
+Number of extensions: 51799872
+Number of successful extensions: 151350
+Number of sequences better than 100: 9217
+Number of HSP's better than 100 without gapping: 0
+Number of HSP's gapped: 139227
+Number of HSP's successfully gapped: 10536
+Length of query: 450
+Length of database: 26613539447
+Length adjustment: 154
+Effective length of query: 296
+Effective length of database: 15362931155
+Effective search space: 4547427621880
+Effective search space used: 4547427621880
+T: 11
+A: 40
+X1: 16 (7.3 bits)
+X2: 38 (14.6 bits)
+X3: 64 (24.7 bits)
+S1: 41 (20.4 bits)
+S2: 80 (35.4 bits)
+ka-blk-alpha gapped: 1.9
+ka-blk-alpha ungapped: 0.7916
+ka-blk-alpha_v gapped: 42.6028
+ka-blk-alpha_v ungapped: 4.96466
+ka-blk-sigma gapped: 43.6362
+
+
+
+
