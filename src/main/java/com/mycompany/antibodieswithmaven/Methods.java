@@ -51,6 +51,9 @@ public class Methods {
     }
 
     public static boolean shouldIReplaceThePeptide(String peptideSeq, PepCoordinates coords, ProbSeq ps) {
+        if (peptideSeq.equals("DKVSLTCMITDFFPEDITVEWQWNGQPAENYK")) {
+
+        }
         String savedPs = ps.sequence.toString();
         int preCoverSum = 0;
         for (int i = coords.left; i < coords.right; i++) {
@@ -58,17 +61,17 @@ public class Methods {
         }
         ps.sequence.replace(coords.left, coords.right, peptideSeq);
         int newCoverSum = 0;
-        int[] newCover = ps.recountCoverage();
+        int[] newCover = ps.recountCoverage(coords.left, coords.right);
         for (int i = coords.left; i < coords.right; i++) {
             newCoverSum += newCover[i];
         }
-        if (preCoverSum<newCoverSum) {
+        if (preCoverSum < newCoverSum) {
             ps.sequence = new StringBuilder(savedPs);
             return true;
         }
         return false;
     }
-    
+
     public static boolean PeptideCrossAnotherPeptide(int start, int end, boolean[] boundaries) {
         for (int i = start; i < end; i++) {
             if (boundaries[i]) {

@@ -46,7 +46,7 @@ public class Antibodies {
         newDb.saveDbToFile(newDbFile);
 
 //        запуск MSGF
-        MSGF.runMSGF(newDbFile);
+//        MSGF.runMSGF(newDbFile);
         // засунуть в отдельный метод
         Tsv newTsv = Tsv.createTSV_FromDir(mzidsAnsTsvDirectory);
         newDb.getPs().cover = newTsv.makeCoverage(newDb.getPs(), true);
@@ -144,32 +144,33 @@ class ReadApplication {
             System.out.println((coord[mHIFC].left - 1 + minHammingIndex + 1) + " " + (coord[mHIFC].right - 1 + minHammingIndex + 1));
             System.out.println(ps.sequence.subSequence(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex));
             System.out.println(peptide.seq);
-            Methods.shouldIReplaceThePeptide(
-                    peptide.seq, 
-                    new PepCoordinates(coord[mHIFC].left - 1 + minHammingIndex, 
-                            coord[mHIFC].right - 1 + minHammingIndex), 
-                    ps);
-//            ps.sequence.replace(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex, peptide.seq);
-            for (int i = coord[mHIFC].left - 1 + minHammingIndex; i < coord[mHIFC].right - 1 + minHammingIndex; i++) {
-                ps.bounds[i] = true;
-            }
-            int startRegionCoordinate = coord[mHIFC].left - 1 + minHammingIndex;
-            String curPS = ps.sequence.toString();
-            for (int i = 0; i < peptide.seq.length(); i++) {
-                if (curPS.charAt(i) != peptide.seq.charAt(i)) {
-                    ps.cover[i + startRegionCoordinate] = peptide.getNumOfRecordsInTSV();
-                } else {
-                    ps.cover[i + startRegionCoordinate] += peptide.getNumOfRecordsInTSV();
+            if (Methods.shouldIReplaceThePeptide(
+                    peptide.seq,
+                    new PepCoordinates(coord[mHIFC].left - 1 + minHammingIndex,
+                            coord[mHIFC].right - 1 + minHammingIndex),
+                    ps)) {
+                for (int i = coord[mHIFC].left - 1 + minHammingIndex; i < coord[mHIFC].right - 1 + minHammingIndex; i++) {
+                    ps.bounds[i] = true;
                 }
+                int startRegionCoordinate = coord[mHIFC].left - 1 + minHammingIndex;
+                peptide.setPepCoords(
+                        new PepCoordinates(startRegionCoordinate,
+                                startRegionCoordinate + peptide.seq.length()));
+                res.add(peptide);
             }
-            
+//            ps.sequence.replace(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex, peptide.seq);
+
+//            String curPS = ps.sequence.toString();
+//            for (int i = 0; i < peptide.seq.length(); i++) {
+//                if (curPS.charAt(i) != peptide.seq.charAt(i)) {
+//                    ps.cover[i + startRegionCoordinate] = peptide.getNumOfRecordsInTSV();
+//                } else {
+//                    ps.cover[i + startRegionCoordinate] += peptide.getNumOfRecordsInTSV();
+//                }
+//            }
             // В данном случае записываю координаты напрямую в последовательности,
             // не упоминая про константный регион, т.к. эти пептиды связаны 
             // с предполагаемой последовательностью, а не с белками в базе. 
-            peptide.setPepCoords(
-                    new PepCoordinates(startRegionCoordinate,
-                                       startRegionCoordinate + peptide.seq.length()));
-            res.add(peptide);
         } else {
 //            peptidesForNextIteration.add(peptide);
         }

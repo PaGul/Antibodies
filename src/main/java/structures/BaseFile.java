@@ -152,19 +152,27 @@ public class BaseFile {
             return;
         }
         for (PepCoordinates pepCoordinates : peptide.getOccurrencesInBigSeq()) {
+
+            if (peptide.seq.equals("DKVSLTCMITDFFPEDITVEWQWNGQPAENYK")) {
+
+            }
             if (pepCoordinates.isConstantRegion) {
                 for (int i = 120; i < 129; i++) {
-                    Peptide notCoveredPeptide = new Peptide(peptide.seq, 
-                            peptide.numOfRecordsInTSV, 
-                            new PepCoordinates(pepCoordinates.left+i, pepCoordinates.right+i));
-                    for (int j = notCoveredPeptide.pepCoords.left; j < notCoveredPeptide.pepCoords.left; j++) {
+                    Peptide notCoveredPeptide = new Peptide(peptide.seq,
+                            peptide.numOfRecordsInTSV,
+                            new PepCoordinates(pepCoordinates.left + i, pepCoordinates.right + i));
+                    // защита от переполнения
+                    if (notCoveredPeptide.pepCoords.right + i > coords.length) {
+                        continue;
+                    }
+                    for (int j = notCoveredPeptide.pepCoords.left; j < notCoveredPeptide.pepCoords.right; j++) {
                         coords[j].add(notCoveredPeptide);
                     }
                 }
             } else {
                 for (int i = pepCoordinates.left; i < pepCoordinates.right; i++) {
-                    Peptide notCoveredPeptide = new Peptide(peptide.seq, 
-                            peptide.numOfRecordsInTSV, 
+                    Peptide notCoveredPeptide = new Peptide(peptide.seq,
+                            peptide.numOfRecordsInTSV,
                             new PepCoordinates(pepCoordinates.left, pepCoordinates.right));
                     coords[i].add(notCoveredPeptide);
                 }
