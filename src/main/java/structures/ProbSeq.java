@@ -33,25 +33,38 @@ public class ProbSeq {
     }
     
     
-    public void recountCoverage() {
-        int[] coverage = new int[sequence.length()];
+    public int[] recountCoverage() {
+        int[] coverage = cover.clone();
         String currSeq = sequence.toString();
         for (int i = 0; i < sequence.length(); i++) {
             for (Object obj : coverageByPeptides[i]) {
                 Peptide peptide = (Peptide) obj;
                 boolean coverPs = true;
+                boolean wasCoverPs = peptide.isContainsInProbSeq();
                 for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
                     if (peptide.seq.charAt(j) != currSeq.charAt(j)) {
                         coverPs = false;
                         break;
                     }
                 }
-                if (coverPs) {
-                    sdf
+                // если покрытие поменялось
+                if (coverPs ^ wasCoverPs) {
+                    // стало покрыто
+                    if (coverPs) {
+                        for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
+                            coverage[j] += peptide.numOfRecordsInTSV;
+                        }
+                    } 
+                    // было покрыто
+                    else {
+                        for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
+                            coverage[j] -= peptide.numOfRecordsInTSV;
+                        }
+                    }
                 }
-                
             }
         }
+        return coverage;
     }
     
     public ProbSeq clone() {
