@@ -111,7 +111,8 @@ public class Tsv {
         }
         return coverage;
     }
-    
+
+    // тут нет добавления в карту пептидов
     public int[] makeCoverage(ProbSeq ps, boolean t) {
         String seqShouldBeCovered = ps.sequence.toString();
         String seqName = ps.probSeqName;

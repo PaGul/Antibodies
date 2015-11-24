@@ -7,6 +7,7 @@ package com.mycompany.antibodieswithmaven;
 import static com.mycompany.antibodieswithmaven.UserConstants.*;
 import externalPrograms.MSGF;
 import helpers.PrintHelper;
+import java.util.HashMap;
 import structures.Tsv;
 import structures.BaseFile;
 import structures.ProbSeq;
@@ -14,6 +15,7 @@ import structures.Peptide;
 import structures.PepCoordinates;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 /**
  *
@@ -37,7 +39,7 @@ public class Antibodies {
         System.out.println("");
         System.out.println("Old and new replaced peptides:");
         // создание новой последовательности, возвращает изменённые пептиды и их координаты
-        LinkedList<Peptide> replacingPeptides = ReadApplication.iterativeApplication(probSeq, peptides);
+        HashMap<String, Peptide> replacingPeptides = ReadApplication.iterativeApplication(probSeq, peptides);
         // создаю новую базу с изменённой предполагаемой последовательностью,
         // в будущем будут меняться и бласт данные
         LinkedHashMap<String, String> newDbData = (LinkedHashMap<String, String>) db.getData().clone();
@@ -52,11 +54,12 @@ public class Antibodies {
         newDb.getPs().cover = newTsv.makeCoverage(newDb.getPs(), true);
         PrintHelper.printProbSeqWithCover(newDb.getPs());
         System.out.println("");
-        for (Peptide peptide : replacingPeptides) {
-
-            System.out.println(peptide.seq);
-            System.out.println(peptide.getPepCoords().toString());
-            for (int i = peptide.getPepCoords().left; i < peptide.getPepCoords().right; i++) {
+        for (Map.Entry<String, Peptide> oldAndNewPep : replacingPeptides.entrySet()) {
+            Peptide newPeptide = oldAndNewPep.getValue();
+            System.out.println(oldAndNewPep.getKey());
+            System.out.println(newPeptide.seq);
+            System.out.println(newPeptide.getPepCoords().toString());
+            for (int i = newPeptide.getPepCoords().left; i < newPeptide.getPepCoords().right; i++) {
                 System.out.print(db.getPs().cover[i] + "-" + newDb.getPs().cover[i] + " ");
             }
             System.out.println("");
@@ -80,24 +83,26 @@ class ReadApplication {
     }
 
     // возвращает список заменивших пептидов
-    public static LinkedList<Peptide> iterativeApplication(ProbSeq ps,
+    public static HashMap<String, Peptide> iterativeApplication(ProbSeq ps,
             LinkedList<Peptide> peptidesToCompare) {
-        LinkedList<Peptide> result = new LinkedList<>();
+        
+        HashMap<String, Peptide> oldPepNewPep = new HashMap<>();
 //        peptidesForNextIteration = new LinkedList<>();
         // кол-во итераций пока что никак не повлияло на результат
         for (int i = 0; i < 1; i++) {
             for (Peptide peptide : peptidesToCompare) {
                 // проверка по всем возможным координатам что сомнительно
-                replaceSeqByPeptide(ps, peptide, peptide.getOccurrencesInBigSeq().toArray(new PepCoordinates[0]), result);
+                replaceSeqByPeptide(ps, peptide, oldPepNewPep);
             }
             // следующая итерация
 //            peptidesToCompare = peptidesForNextIteration;
 //            peptidesForNextIteration = new LinkedList<>();
         }
-        return result;
+        return oldPepNewPep;
     }
 
-    private static void replaceSeqByPeptide(ProbSeq ps, Peptide peptide, PepCoordinates[] coord, LinkedList<Peptide> res) {
+    private static void replaceSeqByPeptide(ProbSeq ps, Peptide peptide, HashMap<String, Peptide> oldPepNewPep) {
+        PepCoordinates[] coord = peptide.getOccurrencesInBigSeq().toArray(new PepCoordinates[0]);
 //        PepCoordinates coord = peptide.getFirstCoordinate();
         int[] offsets;
         int minHamming = Integer.MAX_VALUE;
@@ -141,8 +146,9 @@ class ReadApplication {
 
         //добавление нового пептида к последовательности
         if (minHammingIndex != -1) {
+            String oldSubSeq = ps.sequence.subSequence(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex).toString();
             System.out.println((coord[mHIFC].left - 1 + minHammingIndex + 1) + " " + (coord[mHIFC].right - 1 + minHammingIndex + 1));
-            System.out.println(ps.sequence.subSequence(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex));
+            System.out.println(oldSubSeq);
             System.out.println(peptide.seq);
             if (Methods.shouldIReplaceThePeptide(
                     peptide.seq,
@@ -156,7 +162,7 @@ class ReadApplication {
                 peptide.setPepCoords(
                         new PepCoordinates(startRegionCoordinate,
                                 startRegionCoordinate + peptide.seq.length()));
-                res.add(peptide);
+                oldPepNewPep.put(oldSubSeq, peptide);
             }
 //            ps.sequence.replace(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex, peptide.seq);
 

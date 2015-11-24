@@ -20,6 +20,7 @@ public class ProbSeq {
     public boolean[] bounds;
     
     public List[] coverageByPeptides;
+    
     public ProbSeq(String probSeqName, String probSeq) {
         this.probSeqName = probSeqName;
         this.sequence = new StringBuilder(probSeq);
