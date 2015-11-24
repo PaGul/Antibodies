@@ -5,6 +5,7 @@
  */
 package com.mycompany.antibodieswithmaven;
 
+import java.util.List;
 import structures.PepCoordinates;
 import structures.ProbSeq;
 import structures.Peptide;
@@ -52,9 +53,10 @@ public class Methods {
 
     public static boolean shouldIReplaceThePeptide(String peptideSeq, PepCoordinates coords, ProbSeq ps) {
         if (peptideSeq.equals("DKVSLTCMITDFFPEDITVEWQWNGQPAENYK")) {
-
+            
         }
         String savedPs = ps.sequence.toString();
+        List[] savedCoverageByPep = ps.cloneCoverageByPeptides();
         int preCoverSum = 0;
         for (int i = coords.left; i < coords.right; i++) {
             preCoverSum += ps.cover[i];
@@ -66,10 +68,13 @@ public class Methods {
             newCoverSum += newCover[i];
         }
         if (preCoverSum < newCoverSum) {
-            ps.sequence = new StringBuilder(savedPs);
             return true;
+        } else {
+            ps.sequence = new StringBuilder(savedPs);
+            ps.setCoverageByPeptides(savedCoverageByPep);
+            return false;
         }
-        return false;
+        
     }
 
     public static boolean PeptideCrossAnotherPeptide(int start, int end, boolean[] boundaries) {

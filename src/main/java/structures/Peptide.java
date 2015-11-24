@@ -32,6 +32,15 @@ public class Peptide {
         this.numOfRecordsInTSV = numOfRecordsInTSV;
         this.pepCoords = pepCoords;
     }
+
+    private Peptide(String seq, int numOfRecordsInTSV, LinkedList<String> proteinNamesWhereMayOccurrencePeptide, PepCoordinates pepCoords, boolean containsInProbSeq) {
+        this.seq = seq;
+        this.numOfRecordsInTSV = numOfRecordsInTSV;
+        this.proteinNamesWhereMayOccurrencePeptide = proteinNamesWhereMayOccurrencePeptide;
+        this.pepCoords = pepCoords;
+        this.containsInProbSeq = containsInProbSeq;
+    }
+    
     
     
     
@@ -74,5 +83,8 @@ public class Peptide {
         this.pepCoords = pepCoords;
     }
     
+    public Peptide clone() {
+        return new Peptide(seq, numOfRecordsInTSV, proteinNamesWhereMayOccurrencePeptide, pepCoords, containsInProbSeq);
+    }
     
 }

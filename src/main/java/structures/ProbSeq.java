@@ -47,12 +47,14 @@ public class ProbSeq {
                 if (coverPs ^ wasCoverPs) {
                     // стало покрыто
                     if (coverPs) {
+                        peptide.setContainsInProbSeq(true);
                         for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
                             coverage[j] += peptide.numOfRecordsInTSV;
                         }
                     } 
                     // было покрыто
                     else {
+                        peptide.setContainsInProbSeq(false);
                         for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
                             coverage[j] -= peptide.numOfRecordsInTSV;
                         }
@@ -62,9 +64,26 @@ public class ProbSeq {
         }
         return coverage;
     }
+
+    public void setCoverageByPeptides(List[] coverageByPeptides) {
+        this.coverageByPeptides = coverageByPeptides;
+    }
+    
+    
     
     public ProbSeq clone() {
         ProbSeq res = new ProbSeq(probSeqName, sequence.toString(), cover.clone());
+        return res;
+    }
+    
+    public List[] cloneCoverageByPeptides() {
+        List[] res = new List[coverageByPeptides.length];
+        for (int i = 0; i < res.length; i++) {
+            for (Object obj : coverageByPeptides[i]) {
+                Peptide peptide = (Peptide) obj;
+                res[i].add(peptide.clone());
+            }
+        }
         return res;
     }
 }

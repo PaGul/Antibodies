@@ -48,7 +48,7 @@ public class Antibodies {
         newDb.saveDbToFile(newDbFile);
 
 //        запуск MSGF
-//        MSGF.runMSGF(newDbFile);
+        MSGF.runMSGF(newDbFile);
         // засунуть в отдельный метод
         Tsv newTsv = Tsv.createTSV_FromDir(mzidsAnsTsvDirectory);
         newDb.getPs().cover = newTsv.makeCoverage(newDb.getPs(), true);
@@ -85,7 +85,7 @@ class ReadApplication {
     // возвращает список заменивших пептидов
     public static HashMap<String, Peptide> iterativeApplication(ProbSeq ps,
             LinkedList<Peptide> peptidesToCompare) {
-        
+
         HashMap<String, Peptide> oldPepNewPep = new HashMap<>();
 //        peptidesForNextIteration = new LinkedList<>();
         // кол-во итераций пока что никак не повлияло на результат
@@ -147,14 +147,15 @@ class ReadApplication {
         //добавление нового пептида к последовательности
         if (minHammingIndex != -1) {
             String oldSubSeq = ps.sequence.subSequence(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex).toString();
-            System.out.println((coord[mHIFC].left - 1 + minHammingIndex + 1) + " " + (coord[mHIFC].right - 1 + minHammingIndex + 1));
-            System.out.println(oldSubSeq);
-            System.out.println(peptide.seq);
+
             if (Methods.shouldIReplaceThePeptide(
                     peptide.seq,
                     new PepCoordinates(coord[mHIFC].left - 1 + minHammingIndex,
                             coord[mHIFC].right - 1 + minHammingIndex),
                     ps)) {
+                System.out.println((coord[mHIFC].left - 1 + minHammingIndex + 1) + " " + (coord[mHIFC].right - 1 + minHammingIndex + 1));
+                System.out.println(oldSubSeq);
+                System.out.println(peptide.seq);
                 for (int i = coord[mHIFC].left - 1 + minHammingIndex; i < coord[mHIFC].right - 1 + minHammingIndex; i++) {
                     ps.bounds[i] = true;
                 }
