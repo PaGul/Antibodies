@@ -159,12 +159,16 @@ public class Tsv {
 
     public LinkedList<Peptide> getPeptides(int minimumNumberOfOccurrences, ProbSeq ps) {
         String probSeqName = ps.probSeqName;
+        String currSeq = ps.sequence.toString();
         LinkedList<Peptide> res = new LinkedList<>();
         for (Map.Entry<String, Peptide> entry : PeptideNameAndPeptide.entrySet()) {
             // не учитывать пептиды, уже приложившиеся к предполагаемой последовательности
-            if (entry.getValue().getProteinNamesWhereMayOccurrencePeptide().contains(probSeqName)) {
+            if (currSeq.contains(entry.getKey())) {
                 continue;
             }
+//            if (entry.getValue().getProteinNamesWhereMayOccurrencePeptide().contains(probSeqName)) {
+//                continue;
+//            }
             if (entry.getValue().getNumOfRecordsInTSV() >= minimumNumberOfOccurrences) {
                 res.add(entry.getValue());
             }

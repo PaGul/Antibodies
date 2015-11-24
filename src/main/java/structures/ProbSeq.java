@@ -7,6 +7,7 @@
 package structures;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -40,7 +41,7 @@ public class ProbSeq {
         for (int i = start; i < end; i++) {
             for (Object obj : coverageByPeptides[i]) {
                 Peptide peptide = (Peptide) obj;
-                boolean coverPs = currSeq.contains(peptide.seq);
+                boolean coverPs = currSeq.substring(peptide.getPepCoords().left, peptide.getPepCoords().right).equals(peptide.seq);
                 boolean wasCoverPs = peptide.isContainsInProbSeq();
                 
                 // если покрытие поменялось
@@ -50,6 +51,7 @@ public class ProbSeq {
                         peptide.setContainsInProbSeq(true);
                         for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
                             coverage[j] += peptide.numOfRecordsInTSV;
+                            
                         }
                     } 
                     // было покрыто
@@ -79,6 +81,7 @@ public class ProbSeq {
     public List[] cloneCoverageByPeptides() {
         List[] res = new List[coverageByPeptides.length];
         for (int i = 0; i < res.length; i++) {
+            res[i] = new LinkedList<Peptide>();
             for (Object obj : coverageByPeptides[i]) {
                 Peptide peptide = (Peptide) obj;
                 res[i].add(peptide.clone());

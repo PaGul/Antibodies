@@ -6,7 +6,10 @@
 
 package structures;
 
+import java.util.Collection;
+import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.TreeSet;
 
 /**
  *
@@ -43,8 +46,15 @@ public class Peptide {
     
     
     
-    
-    LinkedList<PepCoordinates> occurrencesInBigSeq = new LinkedList<>();
+    Collection<PepCoordinates> occurrencesInBigSeq = new TreeSet<PepCoordinates>(new Comparator<PepCoordinates>(){
+
+        @Override
+        public int compare(PepCoordinates o1, PepCoordinates o2) {
+            return o1.left - o2.left;
+        }
+        
+    });
+//    LinkedList<PepCoordinates> occurrencesInBigSeq = new LinkedList<>();
 
     public LinkedList<String> getProteinNamesWhereMayOccurrencePeptide() {
         return proteinNamesWhereMayOccurrencePeptide;
@@ -68,7 +78,7 @@ public class Peptide {
     
     
 
-    public LinkedList<PepCoordinates> getOccurrencesInBigSeq() {
+    public Collection<PepCoordinates> getOccurrencesInBigSeq() {
         return occurrencesInBigSeq;
     }
 //    public PepCoordinates getFirstCoordinate() {
