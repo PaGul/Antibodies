@@ -42,6 +42,34 @@ public class PepCoordinates {
     public String toString() {
         return "PepCoordinates{" + "left=" + (left + 1) + ", right=" + (right + 1) + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 47 * hash + this.left;
+        hash = 47 * hash + this.right;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final PepCoordinates other = (PepCoordinates) obj;
+        if (this.left != other.left) {
+            return false;
+        }
+        if (this.right != other.right) {
+            return false;
+        }
+        return true;
+    }
+    
+    
     
     
 }

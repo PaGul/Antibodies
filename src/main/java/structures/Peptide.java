@@ -9,6 +9,7 @@ package structures;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.TreeSet;
 
 /**
@@ -96,5 +97,47 @@ public class Peptide {
     public Peptide clone() {
         return new Peptide(seq, numOfRecordsInTSV, proteinNamesWhereMayOccurrencePeptide, pepCoords, containsInProbSeq);
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 97 * hash + Objects.hashCode(this.seq);
+        hash = 97 * hash + this.numOfRecordsInTSV;
+        hash = 97 * hash + Objects.hashCode(this.pepCoords);
+        hash = 97 * hash + (this.containsInProbSeq ? 1 : 0);
+        hash = 97 * hash + Objects.hashCode(this.occurrencesInBigSeq);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Peptide other = (Peptide) obj;
+        if (!Objects.equals(this.seq, other.seq)) {
+            return false;
+        }
+        if (this.numOfRecordsInTSV != other.numOfRecordsInTSV) {
+            return false;
+        }
+        if (!Objects.equals(this.pepCoords, other.pepCoords)) {
+            return false;
+        }
+        if (this.containsInProbSeq != other.containsInProbSeq) {
+            return false;
+        }
+        if (!Objects.equals(this.occurrencesInBigSeq, other.occurrencesInBigSeq)) {
+            return false;
+        }
+        return true;
+    }
+
+    
+    
+    
     
 }

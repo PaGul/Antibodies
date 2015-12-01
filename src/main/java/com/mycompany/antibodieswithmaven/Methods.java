@@ -56,7 +56,7 @@ public class Methods {
             
         }
         if (peptideSeq.equals("GCLVKGYFPEPVTLTW")) {
-            System.out.println("");
+//            System.out.println("");
         }
         
         String savedPs = ps.sequence.toString();
@@ -66,7 +66,7 @@ public class Methods {
             preCoverSum += ps.cover[i];
         }
         if (peptideSeq.equals("EEQFNSTFR")) {
-            System.out.println("");
+//            System.out.println("");
         }
         ps.sequence.replace(coords.left, coords.right, peptideSeq);
         int newCoverSum = 0;

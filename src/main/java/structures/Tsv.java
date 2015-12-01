@@ -95,17 +95,17 @@ public class Tsv {
                 int end = start + peptide.seq.length();
                 int pepCov = peptide.getNumOfRecordsInTSV();;
                 for (int i = start; i < end; i++) {
-                    try{
+//                    try{
                         coverage[i] += pepCov;
                         peptide.setContainsInProbSeq(true);
                         peptide.setPepCoords(new PepCoordinates(start, end));
-                    }
+//                    }
                     
                     // очень неприятно: MS/GF почему-то обнаруживает в последовательности пептиды, которых нет
-                    catch (Exception e){
+//                    catch (Exception e){
 //                        System.out.println(peptide.seq);
 //                        System.out.println(peptide.getProteinNamesWhereMayOccurrencePeptide().getFirst());
-                    }
+//                    }
                 }
             }
         }
@@ -124,15 +124,15 @@ public class Tsv {
                 int end = start + peptide.seq.length();
                 int pepCov = peptide.getNumOfRecordsInTSV();
                 for (int i = start; i < end; i++) {
-                    try{
+//                    try{
                         coverage[i] += pepCov;
-                    }
+//                    }
                     
                     // очень неприятно: MS/GF почему-то обнаруживает в последовательности пептиды, которых нет
-                    catch (Exception e){
+//                    catch (Exception e){
 //                        System.out.println(peptide.seq);
 //                        System.out.println(peptide.getProteinNamesWhereMayOccurrencePeptide().getFirst());
-                    }
+//                    }
                 }
             }
         }
@@ -163,12 +163,15 @@ public class Tsv {
         LinkedList<Peptide> res = new LinkedList<>();
         for (Map.Entry<String, Peptide> entry : PeptideNameAndPeptide.entrySet()) {
             // не учитывать пептиды, уже приложившиеся к предполагаемой последовательности
-            if (currSeq.contains(entry.getKey())) {
-                continue;
-            }
-//            if (entry.getValue().getProteinNamesWhereMayOccurrencePeptide().contains(probSeqName)) {
+//            if (entry.getKey().equals("AKTTPPSVY")) {
+//                System.out.println("");
+//            }
+//            if (currSeq.contains(entry.getKey())) {
 //                continue;
 //            }
+            if (entry.getValue().getProteinNamesWhereMayOccurrencePeptide().contains(probSeqName)) {
+                continue;
+            }
             if (entry.getValue().getNumOfRecordsInTSV() >= minimumNumberOfOccurrences) {
                 res.add(entry.getValue());
             }
