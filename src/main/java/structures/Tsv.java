@@ -10,6 +10,7 @@ import structures.Peptide;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -33,7 +34,7 @@ public class Tsv {
             runReadOnFile(filename);
         }
     }
-    
+
     public static Tsv createTSV_FromDir(String tsvDirectory) {
         String[] tsvFiles = new String[UserConstants.enzymeNames.length];
         for (int i = 0; i < UserConstants.enzymeNames.length; i++) {
@@ -93,46 +94,18 @@ public class Tsv {
             if (peptide.getProteinNamesWhereMayOccurrencePeptide().contains(seqName)) {
                 int start = seqShouldBeCovered.indexOf(peptide.seq, 0);
                 int end = start + peptide.seq.length();
-                int pepCov = peptide.getNumOfRecordsInTSV();;
-                for (int i = start; i < end; i++) {
-//                    try{
-                        coverage[i] += pepCov;
-                        peptide.setContainsInProbSeq(true);
-                        peptide.setPepCoords(new PepCoordinates(start, end));
-//                    }
-                    
-                    // очень неприятно: MS/GF почему-то обнаруживает в последовательности пептиды, которых нет
-//                    catch (Exception e){
-//                        System.out.println(peptide.seq);
-//                        System.out.println(peptide.getProteinNamesWhereMayOccurrencePeptide().getFirst());
-//                    }
-                }
-            }
-        }
-        return coverage;
-    }
-
-    // тут нет добавления в карту пептидов
-    public int[] makeCoverage(ProbSeq ps, boolean t) {
-        String seqShouldBeCovered = ps.sequence.toString();
-        String seqName = ps.probSeqName;
-        int[] coverage = new int[seqShouldBeCovered.length()];
-        // Going through all peptides and find peptides, that contains in probSeq 
-        for (Peptide peptide : PeptideNameAndPeptide.values()) {
-            if (peptide.getProteinNamesWhereMayOccurrencePeptide().contains(seqName)) {
-                int start = seqShouldBeCovered.indexOf(peptide.seq, 0);
-                int end = start + peptide.seq.length();
                 int pepCov = peptide.getNumOfRecordsInTSV();
+                peptide.setContainsInProbSeq(true);
+                peptide.setPepCoords(new PepCoordinates(start, end));
                 for (int i = start; i < end; i++) {
-//                    try{
+                    try {
                         coverage[i] += pepCov;
-//                    }
-                    
-                    // очень неприятно: MS/GF почему-то обнаруживает в последовательности пептиды, которых нет
-//                    catch (Exception e){
-//                        System.out.println(peptide.seq);
-//                        System.out.println(peptide.getProteinNamesWhereMayOccurrencePeptide().getFirst());
-//                    }
+                    } // очень неприятно: MS/GF почему-то обнаруживает в последовательности пептиды, которых нет
+                    catch (Exception e) {
+                        System.out.println("FAIL!");
+                        System.out.println(peptide.seq);
+                        System.out.println(peptide.getProteinNamesWhereMayOccurrencePeptide().getFirst());
+                    }
                 }
             }
         }
@@ -159,16 +132,9 @@ public class Tsv {
 
     public LinkedList<Peptide> getPeptides(int minimumNumberOfOccurrences, ProbSeq ps) {
         String probSeqName = ps.probSeqName;
-        String currSeq = ps.sequence.toString();
         LinkedList<Peptide> res = new LinkedList<>();
         for (Map.Entry<String, Peptide> entry : PeptideNameAndPeptide.entrySet()) {
             // не учитывать пептиды, уже приложившиеся к предполагаемой последовательности
-//            if (entry.getKey().equals("AKTTPPSVY")) {
-//                System.out.println("");
-//            }
-//            if (currSeq.contains(entry.getKey())) {
-//                continue;
-//            }
             if (entry.getValue().getProteinNamesWhereMayOccurrencePeptide().contains(probSeqName)) {
                 continue;
             }
@@ -186,6 +152,20 @@ public class Tsv {
         });
         return res;
     }
-    
-    
+
+    public LinkedList<Peptide> getAllPeptides() {
+        LinkedList<Peptide> res = new LinkedList<>();
+        for (Peptide peptide : PeptideNameAndPeptide.values()) {
+            res.add(peptide);
+        }
+        res.sort(new Comparator<Peptide>() {
+
+            @Override
+            public int compare(Peptide o1, Peptide o2) {
+                return o2.getNumOfRecordsInTSV() - o1.getNumOfRecordsInTSV();
+            }
+        });
+        return res;
+    }
+
 }

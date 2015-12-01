@@ -5,6 +5,8 @@
  */
 package com.mycompany.antibodieswithmaven;
 
+import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 import structures.PepCoordinates;
 import structures.ProbSeq;
@@ -56,7 +58,7 @@ public class Methods {
             
         }
         if (peptideSeq.equals("GCLVKGYFPEPVTLTW")) {
-//            System.out.println("");
+            System.out.println("");
         }
         
         String savedPs = ps.sequence.toString();
@@ -94,4 +96,24 @@ public class Methods {
         return false;
     }
 
+    
+    public static LinkedList<Peptide> getOnlyUnCoveredPeptides(LinkedList<Peptide> peptides, ProbSeq ps, int minimumNumberOfOccurrences) {
+        LinkedList<Peptide> res = new LinkedList<>();
+        for (Peptide peptide : peptides) {
+            if (peptide.getProteinNamesWhereMayOccurrencePeptide().contains(ps.probSeqName)) {
+                continue;
+            }
+            if (peptide.getNumOfRecordsInTSV() >= minimumNumberOfOccurrences) {
+                res.add(peptide);
+            }
+        }
+        res.sort(new Comparator<Peptide>() {
+
+            @Override
+            public int compare(Peptide o1, Peptide o2) {
+                return o2.getNumOfRecordsInTSV() - o1.getNumOfRecordsInTSV();
+            }
+        });
+        return res;
+    }
 }

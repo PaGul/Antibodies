@@ -32,14 +32,20 @@ public class Antibodies {
         db.getPs().cover = tsv.makeCoverage(db.getPs());
         // новая изменяемая последовательность
         ProbSeq probSeq = db.getPs().clone();
-        LinkedList<Peptide> peptides = tsv.getPeptides(1, probSeq);
-        probSeq.coverageByPeptides = db.addCoordinatesToPeptidesObjects(peptides);
-
+        LinkedList<Peptide> peptidesAll = tsv.getAllPeptides();
+        
+        
+        probSeq.coverageByPeptides = db.addCoordinatesToPeptidesObjects(peptidesAll);
+        LinkedList<Peptide> peptides = Methods.getOnlyUnCoveredPeptides(peptidesAll, probSeq, 1);
+        
+        
         PrintHelper.printProbSeqWithCover(probSeq);
         System.out.println("");
         System.out.println("Old and new replaced peptides:");
         // создание новой последовательности, возвращает изменённые пептиды и их координаты
         HashMap<String, Peptide> replacingPeptides = ReadApplication.iterativeApplication(probSeq, peptides);
+        PrintHelper.printProbSeqWithCover(probSeq);
+
         // создаю новую базу с изменённой предполагаемой последовательностью,
         // в будущем будут меняться и бласт данные
         LinkedHashMap<String, String> newDbData = (LinkedHashMap<String, String>) db.getData().clone();
@@ -51,7 +57,7 @@ public class Antibodies {
         MSGF.runMSGF(newDbFile);
         // засунуть в отдельный метод
         Tsv newTsv = Tsv.createTSV_FromDir(mzidsAnsTsvDirectory);
-        newDb.getPs().cover = newTsv.makeCoverage(newDb.getPs(), true);
+        newDb.getPs().cover = newTsv.makeCoverage(newDb.getPs());
         PrintHelper.printProbSeqWithCover(newDb.getPs());
         System.out.println("");
         for (Map.Entry<String, Peptide> oldAndNewPep : replacingPeptides.entrySet()) {
@@ -91,7 +97,7 @@ class ReadApplication {
         // кол-во итераций пока что никак не повлияло на результат
         for (int i = 0; i < 1; i++) {
             for (Peptide peptide : peptidesToCompare) {
-                // проверка по всем возможным координатам что сомнительно
+                
                 replaceSeqByPeptide(ps, peptide, oldPepNewPep);
             }
             // следующая итерация

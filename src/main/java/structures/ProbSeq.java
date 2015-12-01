@@ -53,39 +53,42 @@ public class ProbSeq {
                         Peptide updatedPeptide = peptide.clone();
                         updatedPeptide.setContainsInProbSeq(true);
 
+//                        if (start == 151 && end == 167) {
+//                            System.out.println(peptide.seq + " " + peptide.pepCoords.left + " " + peptide.pepCoords.right);
+//                            System.out.println(peptide.numOfRecordsInTSV);
+//                            System.out.println("add");
+//                        }
                         for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
-//                            if (j==202) {
-//                                System.out.println(peptide.seq+" " + peptide.pepCoords.left+" "+peptide.pepCoords.right);
-//                                System.out.println(coverage[j]);
-//                            }
-                            int temp = 0;
-                            temp = coverageByPeptides[j].indexOf(peptide);
-                            coverageByPeptides[j].set(temp, updatedPeptide);
-
-//                            Peptide cur = (Peptide)(coverageByPeptides[j].get(coverageByPeptides[j].indexOf(peptide)));
-//                            cur.setContainsInProbSeq(true);
+                            coverageByPeptides[j].set(coverageByPeptides[j].indexOf(peptide), updatedPeptide);
                             coverage[j] += peptide.numOfRecordsInTSV;
 
+//                            if (start == 151 && end == 167) {
+//                                System.out.print(coverage[j] + " ");
+//                            }
                         }
                     } // было покрыто
                     else {
                         Peptide updatedPeptide = peptide.clone();
                         updatedPeptide.setContainsInProbSeq(false);
                         coverageByPeptides[i].set(k, peptide);
+//                        if (start == 151 && end == 167) {
+//                            System.out.println(peptide.seq + " " + peptide.pepCoords.left + " " + peptide.pepCoords.right);
+//                            System.out.println(peptide.numOfRecordsInTSV);
+//                            System.out.println("remove");
+//                        }
                         for (int j = peptide.pepCoords.left; j < peptide.pepCoords.right; j++) {
-//                            if (j==202) {
-//                                System.out.println(peptide.seq+" " + peptide.pepCoords.left+" "+peptide.pepCoords.right);
-//                                System.out.println(coverage[j]);
-//                            }
-//                            Peptide cur = (Peptide)(coverageByPeptides[j].get(coverageByPeptides[j].indexOf(peptide)));
-//                            cur.setContainsInProbSeq(true);
                             coverageByPeptides[j].set(coverageByPeptides[j].indexOf(peptide), updatedPeptide);
                             coverage[j] -= peptide.numOfRecordsInTSV;
+
+//                            if (start == 151 && end == 167) {
+//                                System.out.print(coverage[j] + " ");
+//                            }
                         }
                     }
                 }
             }
         }
+        
         return coverage;
     }
 
