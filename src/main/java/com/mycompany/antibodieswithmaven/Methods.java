@@ -11,6 +11,7 @@ import java.util.List;
 import structures.PepCoordinates;
 import structures.ProbSeq;
 import structures.Peptide;
+import structures.Tsv;
 
 /**
  *
@@ -53,11 +54,8 @@ public class Methods {
         return distance;
     }
 
-    public static boolean shouldIReplaceThePeptide(String peptideSeq, PepCoordinates coords, ProbSeq ps) {
+    public static boolean shouldIReplaceThePeptide(String peptideSeq, PepCoordinates coords, ProbSeq ps, Tsv tsv) {
         if (peptideSeq.equals("DKVSLTCMITDFFPEDITVEWQWNGQPAENYK")) {
-            
-        }
-        if (peptideSeq.equals("GCLVKGYFPEPVTLTW")) {
             System.out.println("");
         }
         
@@ -72,7 +70,7 @@ public class Methods {
         }
         ps.sequence.replace(coords.left, coords.right, peptideSeq);
         int newCoverSum = 0;
-        int[] newCover = ps.recountCoverage(coords.left, coords.right);
+        int[] newCover = tsv.makeStraightCoverage(ps);
         for (int i = coords.left; i < coords.right; i++) {
             newCoverSum += newCover[i];
         }

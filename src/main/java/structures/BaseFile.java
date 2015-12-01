@@ -153,9 +153,6 @@ public class BaseFile {
         }
         for (PepCoordinates pepCoordinates : peptide.getOccurrencesInBigSeq()) {
 
-            if (peptide.seq.equals("AKTTPPSVY")) {
-//                System.out.println("");
-            }
             if (pepCoordinates.isConstantRegion) {
                 for (int i = 120; i < 129; i++) {
                     Peptide notCoveredPeptide = new Peptide(peptide.seq,

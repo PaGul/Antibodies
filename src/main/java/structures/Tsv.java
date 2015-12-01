@@ -98,14 +98,27 @@ public class Tsv {
                 peptide.setContainsInProbSeq(true);
                 peptide.setPepCoords(new PepCoordinates(start, end));
                 for (int i = start; i < end; i++) {
-                    try {
                         coverage[i] += pepCov;
-                    } // очень неприятно: MS/GF почему-то обнаруживает в последовательности пептиды, которых нет
-                    catch (Exception e) {
-                        System.out.println("FAIL!");
-                        System.out.println(peptide.seq);
-                        System.out.println(peptide.getProteinNamesWhereMayOccurrencePeptide().getFirst());
-                    }
+                }
+            }
+        }
+        return coverage;
+    }
+    
+    public int[] makeStraightCoverage(ProbSeq ps) {
+        String seqShouldBeCovered = ps.sequence.toString();
+        String seqName = ps.probSeqName;
+        int[] coverage = new int[seqShouldBeCovered.length()];
+        // Going through all peptides and find peptides, that contains in probSeq 
+        for (Peptide peptide : PeptideNameAndPeptide.values()) {
+            if (seqShouldBeCovered.contains(peptide.seq)) {
+                int start = seqShouldBeCovered.indexOf(peptide.seq, 0);
+                int end = start + peptide.seq.length();
+                int pepCov = peptide.getNumOfRecordsInTSV();
+                peptide.setContainsInProbSeq(true);
+                peptide.setPepCoords(new PepCoordinates(start, end));
+                for (int i = start; i < end; i++) {
+                        coverage[i] += pepCov;
                 }
             }
         }

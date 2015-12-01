@@ -22,12 +22,12 @@ import java.util.Map;
  * @author pavel
  */
 public class Antibodies {
-
+    static Tsv tsv;
     public static void main(String[] args) throws InterruptedException {
 //        String fileNameOfProbSeq = "/Users/pavelgulaev/Bioinformatics/Antibodies/HC_genoms.fasta";
 
         BaseFile db = new BaseFile(dbFile);
-        Tsv tsv = Tsv.createTSV_FromDir(tsvDirectory);
+        tsv = Tsv.createTSV_FromDir(tsvDirectory);
         // посчитал покрытие и записал его в базу
         db.getPs().cover = tsv.makeCoverage(db.getPs());
         // новая изменяемая последовательность
@@ -43,9 +43,8 @@ public class Antibodies {
         System.out.println("");
         System.out.println("Old and new replaced peptides:");
         // создание новой последовательности, возвращает изменённые пептиды и их координаты
-        HashMap<String, Peptide> replacingPeptides = ReadApplication.iterativeApplication(probSeq, peptides);
-        PrintHelper.printProbSeqWithCover(probSeq);
-
+        HashMap<String, Peptide> replacingPeptides = ReadApplication.iterativeApplication(probSeq, peptides, tsv);
+//        probSeq.sequence.replace(363, 395, "DKVSLTCMITDFFPEDITVEWQWNGQPAENYK");
         // создаю новую базу с изменённой предполагаемой последовательностью,
         // в будущем будут меняться и бласт данные
         LinkedHashMap<String, String> newDbData = (LinkedHashMap<String, String>) db.getData().clone();
@@ -90,7 +89,7 @@ class ReadApplication {
 
     // возвращает список заменивших пептидов
     public static HashMap<String, Peptide> iterativeApplication(ProbSeq ps,
-            LinkedList<Peptide> peptidesToCompare) {
+            LinkedList<Peptide> peptidesToCompare, Tsv tsv) {
 
         HashMap<String, Peptide> oldPepNewPep = new HashMap<>();
 //        peptidesForNextIteration = new LinkedList<>();
@@ -98,7 +97,7 @@ class ReadApplication {
         for (int i = 0; i < 1; i++) {
             for (Peptide peptide : peptidesToCompare) {
                 
-                replaceSeqByPeptide(ps, peptide, oldPepNewPep);
+                replaceSeqByPeptide(ps, peptide, oldPepNewPep, tsv);
             }
             // следующая итерация
 //            peptidesToCompare = peptidesForNextIteration;
@@ -107,7 +106,8 @@ class ReadApplication {
         return oldPepNewPep;
     }
 
-    private static void replaceSeqByPeptide(ProbSeq ps, Peptide peptide, HashMap<String, Peptide> oldPepNewPep) {
+    private static void replaceSeqByPeptide(ProbSeq ps, Peptide peptide, HashMap<String, Peptide> oldPepNewPep,
+            Tsv tsv) {
         PepCoordinates[] coord = peptide.getOccurrencesInBigSeq().toArray(new PepCoordinates[0]);
 //        PepCoordinates coord = peptide.getFirstCoordinate();
         int[] offsets;
@@ -158,7 +158,7 @@ class ReadApplication {
                     peptide.seq,
                     new PepCoordinates(coord[mHIFC].left - 1 + minHammingIndex,
                             coord[mHIFC].right - 1 + minHammingIndex),
-                    ps)) {
+                    ps, tsv)) {
                 System.out.println((coord[mHIFC].left - 1 + minHammingIndex + 1) + " " + (coord[mHIFC].right - 1 + minHammingIndex + 1));
                 System.out.println(oldSubSeq);
                 System.out.println(peptide.seq);
