@@ -85,7 +85,7 @@ public class Tsv {
     }
     HashMap<String, Peptide> PeptideNameAndPeptide = new HashMap();
 
-    public int[] makeCoverage(ProbSeq ps) {
+    public int[] makeCoverageUsingNames(ProbSeq ps) {
         String seqShouldBeCovered = ps.sequence.toString();
         String seqName = ps.probSeqName;
         int[] coverage = new int[seqShouldBeCovered.length()];
@@ -98,27 +98,41 @@ public class Tsv {
                 peptide.setContainsInProbSeq(true);
                 peptide.setPepCoords(new PepCoordinates(start, end));
                 for (int i = start; i < end; i++) {
-                        coverage[i] += pepCov;
+                    coverage[i] += pepCov;
                 }
             }
         }
         return coverage;
     }
-    
-    public int[] makeStraightCoverage(ProbSeq ps) {
+
+    public int[] makeCoverageUsingCode(ProbSeq ps) {
         String seqShouldBeCovered = ps.sequence.toString();
         String seqName = ps.probSeqName;
         int[] coverage = new int[seqShouldBeCovered.length()];
         // Going through all peptides and find peptides, that contains in probSeq 
         for (Peptide peptide : PeptideNameAndPeptide.values()) {
-            if (seqShouldBeCovered.contains(peptide.seq)) {
-                int start = seqShouldBeCovered.indexOf(peptide.seq, 0);
-                int end = start + peptide.seq.length();
-                int pepCov = peptide.getNumOfRecordsInTSV();
-                peptide.setContainsInProbSeq(true);
-                peptide.setPepCoords(new PepCoordinates(start, end));
-                for (int i = start; i < end; i++) {
-                        coverage[i] += pepCov;
+            for (PepCoordinates pepCoordinates : peptide.occurrencesInBigSeq) {
+                if (pepCoordinates.isConstantRegion) {
+                    for (int i = 120; i < 129; i++) {
+                        int start = pepCoordinates.left + i;
+                        int end = pepCoordinates.right + i;
+                        if (end>=seqShouldBeCovered.length()) continue;
+                        int pepCov = peptide.getNumOfRecordsInTSV();
+                        if (seqShouldBeCovered.substring(start, end).equals(peptide.seq)) {
+                            for (int j = start; j < end; j++) {
+                                coverage[j] += pepCov;
+                            }
+                        }
+                    }
+                } else {
+                    int start = pepCoordinates.left;
+                    int end = pepCoordinates.right;
+                    int pepCov = peptide.getNumOfRecordsInTSV();
+                    if (seqShouldBeCovered.substring(start, end).equals(peptide.seq)) {
+                        for (int j = start; j < end; j++) {
+                            coverage[j] += pepCov;
+                        }
+                    }
                 }
             }
         }

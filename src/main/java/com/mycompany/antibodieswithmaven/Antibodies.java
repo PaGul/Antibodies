@@ -29,7 +29,7 @@ public class Antibodies {
         BaseFile db = new BaseFile(dbFile);
         tsv = Tsv.createTSV_FromDir(tsvDirectory);
         // посчитал покрытие и записал его в базу
-        db.getPs().cover = tsv.makeCoverage(db.getPs());
+        db.getPs().cover = tsv.makeCoverageUsingNames(db.getPs());
         // новая изменяемая последовательность
         ProbSeq probSeq = db.getPs().clone();
         LinkedList<Peptide> peptidesAll = tsv.getAllPeptides();
@@ -53,10 +53,10 @@ public class Antibodies {
         newDb.saveDbToFile(newDbFile);
 
 //        запуск MSGF
-        MSGF.runMSGF(newDbFile);
+//        MSGF.runMSGF(newDbFile);
         // засунуть в отдельный метод
         Tsv newTsv = Tsv.createTSV_FromDir(mzidsAnsTsvDirectory);
-        newDb.getPs().cover = newTsv.makeCoverage(newDb.getPs());
+        newDb.getPs().cover = newTsv.makeCoverageUsingNames(newDb.getPs());
         PrintHelper.printProbSeqWithCover(newDb.getPs());
         System.out.println("");
         for (Map.Entry<String, Peptide> oldAndNewPep : replacingPeptides.entrySet()) {
@@ -125,13 +125,13 @@ class ReadApplication {
                 continue;
             }
             for (int j = 0; j < offsets.length; j++) {
-                if (offsets[j] + coord[i].right - 1 >= ps.sequence.length()) {
+                if (offsets[j] + coord[i].right >= ps.sequence.length()) {
                     break;
                 }
                 int offset = offsets[j];
                 // вычитаю один, потому что отсчёт в последовательности идёт с единицы
-                int leftCoord = coord[i].left - 1 + offset;
-                int rightCoord = coord[i].right - 1 + offset;
+                int leftCoord = coord[i].left + offset;
+                int rightCoord = coord[i].right + offset;
 
                 // проверка на пересечение пептидов
                 if (Methods.PeptideCrossAnotherPeptide(leftCoord, rightCoord, ps.bounds)) {
@@ -152,20 +152,20 @@ class ReadApplication {
 
         //добавление нового пептида к последовательности
         if (minHammingIndex != -1) {
-            String oldSubSeq = ps.sequence.subSequence(coord[mHIFC].left - 1 + minHammingIndex, coord[mHIFC].right - 1 + minHammingIndex).toString();
+            String oldSubSeq = ps.sequence.subSequence(coord[mHIFC].left + minHammingIndex, coord[mHIFC].right + minHammingIndex).toString();
 
             if (Methods.shouldIReplaceThePeptide(
                     peptide.seq,
-                    new PepCoordinates(coord[mHIFC].left - 1 + minHammingIndex,
-                            coord[mHIFC].right - 1 + minHammingIndex),
+                    new PepCoordinates(coord[mHIFC].left + minHammingIndex,
+                            coord[mHIFC].right + minHammingIndex),
                     ps, tsv)) {
-                System.out.println((coord[mHIFC].left - 1 + minHammingIndex + 1) + " " + (coord[mHIFC].right - 1 + minHammingIndex + 1));
+                System.out.println((coord[mHIFC].left + minHammingIndex + 1) + " " + (coord[mHIFC].right + minHammingIndex + 1));
                 System.out.println(oldSubSeq);
                 System.out.println(peptide.seq);
-                for (int i = coord[mHIFC].left - 1 + minHammingIndex; i < coord[mHIFC].right - 1 + minHammingIndex; i++) {
+                for (int i = coord[mHIFC].left  + minHammingIndex; i < coord[mHIFC].right + minHammingIndex; i++) {
                     ps.bounds[i] = true;
                 }
-                int startRegionCoordinate = coord[mHIFC].left - 1 + minHammingIndex;
+                int startRegionCoordinate = coord[mHIFC].left + minHammingIndex;
                 peptide.setPepCoords(
                         new PepCoordinates(startRegionCoordinate,
                                 startRegionCoordinate + peptide.seq.length()));

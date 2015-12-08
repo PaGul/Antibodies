@@ -117,7 +117,8 @@ public class BaseFile {
             for (String proteinNameInDB : proteins.keySet()) {
                 if (proteinNameInDB.contains(proteinWithPeptideName)) {
                     proteinSeq = proteins.get(proteinNameInDB);
-                    int startCoordinate = proteinSeq.indexOf(peptide.seq) + 1;
+//                    int startCoordinate = proteinSeq.indexOf(peptide.seq) + 1;
+                    int startCoordinate = proteinSeq.indexOf(peptide.seq);
                     // сомнительное решение
                     boolean isConstantRegion = (proteinSeq.length() > 150) ? true : false;
                     PepCoordinates newCoord = new PepCoordinates(

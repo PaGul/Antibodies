@@ -55,22 +55,15 @@ public class Methods {
     }
 
     public static boolean shouldIReplaceThePeptide(String peptideSeq, PepCoordinates coords, ProbSeq ps, Tsv tsv) {
-        if (peptideSeq.equals("DKVSLTCMITDFFPEDITVEWQWNGQPAENYK")) {
-            System.out.println("");
-        }
-        
         String savedPs = ps.sequence.toString();
-        List[] savedCoverageByPep = ps.cloneCoverageByPeptides();
+//        List[] savedCoverageByPep = ps.cloneCoverageByPeptides();
         int preCoverSum = 0;
         for (int i = coords.left; i < coords.right; i++) {
             preCoverSum += ps.cover[i];
         }
-        if (peptideSeq.equals("EEQFNSTFR")) {
-//            System.out.println("");
-        }
         ps.sequence.replace(coords.left, coords.right, peptideSeq);
         int newCoverSum = 0;
-        int[] newCover = tsv.makeStraightCoverage(ps);
+        int[] newCover = tsv.makeCoverageUsingCode(ps);
         for (int i = coords.left; i < coords.right; i++) {
             newCoverSum += newCover[i];
         }
@@ -79,7 +72,7 @@ public class Methods {
             return true;
         } else {
             ps.sequence = new StringBuilder(savedPs);
-            ps.setCoverageByPeptides(savedCoverageByPep);
+//            ps.setCoverageByPeptides(savedCoverageByPep);
             return false;
         }
         
